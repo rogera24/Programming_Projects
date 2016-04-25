@@ -1,0 +1,229 @@
+TO DO LIST
+AS OF 11/21/14 upload 1
+-General Tasks-
+* Begin implementing the first campaign mission
+* [MAJOR] Fix the movementRange method or change it for less lag
+* [MAJOR] Fix the recursive pathfinder2 method or change it for less lag
+* [NEW] [MAJOR] Begin converting C# script to Java programming language
+-Requests for Roger-
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* Make Range work for maps of any size - checked
+	* Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+* Implement new ley connexion and intelligence
+	* Change all code that relied on old ley connexion to fit changes
+-Requests for Josh-
+* Expand weapons and equipment classes
+	* Expand equipment class
+* Implement more abilities/spells
+* Make a new "spells" subclass under the abilities class
+* Make the user interface easier to use by requiring key input instead of text input - checked
+* Start expand the tile effect class with a constructor and information/manipulation methods - checked
+* Start creating effect descriptors - checked
+* [NEW] Begin working on pet AI
+
+AS OF 11/16/14 upload 1
+-General Tasks-
+* Begin implementing the first campaign mission
+* [MAJOR] Fix the movementRange method or change it for less lag
+* [NEW] [MAJOR] Fix the recursive pathfinder2 method or change it for less lag
+* Create AI for units controlled by AI players - checked
+	* Make a movement AI for AI players - checked
+-Requests for Roger-
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* Make Range work for maps of any size - checked
+	* Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+* Implement new ley connexion and intelligence
+	* Change all code that relied on old ley connexion to fit changes
+-Requests for Josh-
+* Expand weapons and equipment classes
+	* Expand equipment class
+* Implement more abilities/spells
+* Make a new "spells" subclass under the abilities class
+* [NEW] Make the user interface easier to use by requiring key input instead of text input
+* [NEW] Start expand the tile effect class with a constructor and information/manipulation methods
+* [NEW] Start creating effect descriptors
+
+AS OF 11/14/14 upload 1
+-General Tasks-
+* Begin implementing the first campaign mission
+* Fix the movementRange method or change it for less lag
+* [MOVED FROM ROGER] Create AI for units controlled by AI players - checked
+	* [NEW] Make a movement AI for AI players
+-Requests for Roger-
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* Make Range work for maps of any size - checked
+	* Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+* Implement new ley connexion and intelligence
+	* Change all code that relied on old ley connexion to fit changes
+-Requests for Josh-
+* Expand weapons and equipment classes
+	* Expand equipment class
+* Implement more abilities/spells
+* Make a new "spells" subclass under the abilities class
+AS OF 11/11/14 upload 1
+-General Tasks-
+* Begin implementing the first campaign mission
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* Make Range work for maps of any size - checked
+	* Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+* Implement new ley connexion and intelligence
+	* Change all code that relied on old ley connexion to fit changes
+-Requests for Josh-
+* Expand weapons and equipment classes
+	* Expand weapons class - checked
+	* Expand equipment class
+* Implement more abilities/spells
+* Create new "races" class - Checked
+* Make a new "spells" subclass under the abilities class
+AS OF 9/30/14 upload 1
+-General Tasks-
+* Begin implementing the first campaign mission
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* Make Range work for maps of any size - checked
+	* Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+* Implement new ley connexion and intelligence
+	* Change all code that relied on old ley connexion to fit changes
+-Requests for Josh-
+* Make all arrays into lists - redacted (unnecessary)
+* Give units an inventory - checked
+* Expand weapons and equipment classes
+	* [NEW] Expand weapons class - checked
+	* [NEW] Expand equipment class
+* Implement more abilities/spells
+* [NEW] Create new "races" class
+* [NEW] Make a new "spells" subclass under the abilities class
+AS OF 9/13/14 upload 1
+-General Tasks-
+* Begin implementing the first campaign mission
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* Make Range work for maps of any size
+	* Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+* [NEW] Implement new ley connexion and intelligence
+	* [NEW] Change all code that relied on old ley connexion to fit changes
+-Requests for Josh-
+* Make all arrays into lists
+* Give units an inventory
+* Expand weapons and equipment classes
+* Implement more abilities/spells
+* [NEW] Implement experience and leveling up - Checked
+AS OF 9/7/14 upload 3
+-General Tasks-
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces - Checked
+	* [NEW] Make Range work for maps of any size
+	* [NEW] Prevent Range from wrapping around the left and right side of the map
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* Implement caching of data
+-Requests for Josh-
+* Make all arrays into lists
+* Give units an inventory
+* Expand weapons and equipment classes
+* Implement more abilities/spells
+AS OF 9/7/14 upload 2
+-General Tasks-
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* Implement LAN/Internet multiplayer
+* [NEW] Implement caching of data
+-Requests for Josh-
+* Make all arrays into lists
+* Give units an inventory
+* Expand weapons and equipment classes
+* Implement more abilities/spells
+* [MAJOR] Work on automating unit stats with modifiers derived from abilities - Checked
+AS OF 9/7/14 upload 1
+-General Tasks-
+* Implement a sorted unit initiative order - Checked
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* Fix the getX and getY functions (they're flipped.) - Checked
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces
+	o [MAJOR] Fix the "convertCoordinatesToSpace" method; it appears to be malfunctioning and is identified as the problem by the engine if the "Range" method is fixed in a certain way. Refer to the comments in "Game_Controller.cs" for more information. - Checked
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* [NEW] Implement LAN/Internet multiplayer
+-Requests for Josh-
+* Make all arrays into lists
+* Modify movement for both players and AI so that it would display a path
+for the movement action and then ask to confirm or cancel, as opposed to moving the player directly each time they attempt a move. - Checked
+* Give units an inventory
+* Expand weapons and equipment classes
+* Implement more abilities/spells
+* [MAJOR] Work on automating unit stats with modifiers derived from abilities
+AS OF 9/4/14
+Note: Tasks marked as [MAJOR] are high priority and should be addressed sooner than the other tasks.
+-General Tasks-
+* [NEW] Implement a sorted unit initiative order
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* Fix the getX and getY functions (they're flipped.) - Checked
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces
+	o [MAJOR] Fix the "convertCoordinatesToSpace" method; it appears to be malfunctioning and is identified as the problem by the engine if the "Range" method is fixed in a certain way. Refer to the comments in "Game_Controller.cs" for more information. - Checked
+* Optimize the main loop by splitting up all of the program's components into seperate files
+* [NEW] Implement LAN/Internet multiplayer
+-Requests for Josh-
+* Make all arrays into lists
+* [MAJOR] Ensure that ability ranges work correctly - Checked
+* Implement fog of war - Checked
+* Modify movement for both players and AI so that it would display a path
+for the movement action and then ask to confirm or cancel, as opposed to moving the player directly each time they attempt a move.
+* Give units an inventory
+* Expand weapons and equipment classes
+* Implement more abilities/spells
+* [MAJOR] Work on automating unit stats with modifiers derived from abilities
+
+AS OF 9/3/14
+Note: Tasks marked as [MAJOR] are high priority and should be addressed sooner than the other tasks.
+-General Tasks-
+-Requests for Roger-
+* Create AI for units controlled by AI players
+* Fix the getX and getY functions (they're flipped.)
+* [MAJOR] Fix the "Range" method in game controller such that it returns all of its intended spaces
+	o [MAJOR] Fix the "convertCoordinatesToSpace" method; it appears to be malfunctioning and is identified as the problem by the engine if the "Range" method is fixed in a certain way. Refer to the comments in "Game_Controller.cs" for more information.
+* Optimize the main loop by splitting up all of the program's components into seperate files
+-Requests for Josh-
+* Make all arrays into lists
+* [MAJOR] Ensure that ability ranges work correctly
+* Implement fog of war
+* Modify movement for both players and AI so that it would display a path
+for the movement action and then ask to confirm or cancel, as opposed to moving the player directly each time they attempt a move.
+* Give units an inventory
+* Expand weapons and equipment classes
+* Implement more abilities/spells
+* [MAJOR] Work on automating unit stats with modifiers derived from abilities
+------------------------------
+
+Need to make a warrior class.
+Add var of type class to Unit class
+Need to then make a Unit object 
+set var of Class type to warrior
+Need to then make a array of type abilities in unit class
+Make a new object of type ability called slash
+add slash to warrior

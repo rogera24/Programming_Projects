@@ -1,0 +1,12 @@
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Cube Dimensions Program\bin\Debug\Cube Dimensions Program.exe.config
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Cube Dimensions Program\bin\Debug\Cube Dimensions Program.exe
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Cube Dimensions Program\bin\Debug\Cube Dimensions Program.pdb
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Cube Dimensions Program\obj\Debug\Cube Dimensions Program.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Cube Dimensions Program\obj\Debug\Cube Dimensions Program.exe
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Cube Dimensions Program\obj\Debug\Cube Dimensions Program.pdb
+C:\Users\Roger\Desktop\Lunar Library\Lunar Library\Cube Dimensions Program\bin\Debug\Cube Dimensions Program.exe.config
+C:\Users\Roger\Desktop\Lunar Library\Lunar Library\Cube Dimensions Program\obj\Debug\Cube Dimensions Program.exe
+C:\Users\Roger\Desktop\Lunar Library\Lunar Library\Cube Dimensions Program\obj\Debug\Cube Dimensions Program.pdb
+C:\Users\Roger\Desktop\Lunar Library\Lunar Library\Cube Dimensions Program\bin\Debug\Cube Dimensions Program.exe
+C:\Users\Roger\Desktop\Lunar Library\Lunar Library\Cube Dimensions Program\bin\Debug\Cube Dimensions Program.pdb
+C:\Users\Roger\Desktop\Lunar Library\Lunar Library\Cube Dimensions Program\obj\Debug\Cube Dimensions Program.csprojResolveAssemblyReference.cache

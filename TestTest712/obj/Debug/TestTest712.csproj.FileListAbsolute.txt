@@ -1,0 +1,5 @@
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\TestTest712\bin\Debug\TestTest712.exe.config
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\TestTest712\bin\Debug\TestTest712.exe
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\TestTest712\bin\Debug\TestTest712.pdb
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\TestTest712\obj\Debug\TestTest712.exe
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\TestTest712\obj\Debug\TestTest712.pdb

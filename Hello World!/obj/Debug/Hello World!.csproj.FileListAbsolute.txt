@@ -1,0 +1,5 @@
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Hello World!\bin\Debug\Hello World!.exe.config
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Hello World!\bin\Debug\Hello World!.exe
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Hello World!\bin\Debug\Hello World!.pdb
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Hello World!\obj\Debug\Hello World!.exe
+C:\Users\Joshua\Documents\Lunacy Code\lunacyarts\Lunar Library\Hello World!\obj\Debug\Hello World!.pdb
