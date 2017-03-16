@@ -1,0 +1,6 @@
+2 c) No it didnt keep the origional.
+
+4 b) it was 988kb then 6820kb
+4 c) the size is 1216 kb
+4 d) the size is 856 kb
+4 e) lzma is the best for this files compression if youre looking for size efficiency.

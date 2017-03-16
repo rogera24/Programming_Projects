@@ -1,0 +1,217 @@
+﻿baumbach@mintmath ~ $ su -s
+su: option requires an argument -- 's'
+Usage: su [options] [LOGIN]
+ 
+Options:
+  -c, --command COMMAND         pass COMMAND to the invoked shell
+  -h, --help                    display this help message and exit
+  -, -l, --login                make the shell a login shell
+  -m, -p,
+baumbach@mintmath ~ $ sudo du -s *
+4       hardstuff.txt
+4       hello2.txt
+4       hello3.txt
+4       hello.c
+4       hello.txt
+4       junk.c
+4       newdir
+4       newdir2
+4       newdir3
+4       poem
+4       poem2
+0       poem3
+0       stuff.txt
+12      txt_files
+baumbach@mintmath ~ $ sudo du -s /*
+9488    /bin
+41872   /boot
+4       /cdrom
+4       /dev
+24508   /etc
+410408  /home
+0       /initrd.img
+235464  /lib
+16      /lost+found
+4       /media
+4       /mnt
+759524  /opt
+du: cannot access ‘/proc/23808/task/23808/fd/4’: No such file or directory
+du: cannot access ‘/proc/23808/task/23808/fdinfo/4’: No such file or directo
+ry
+du: cannot access ‘/proc/23808/fd/4’: No such file or directory
+du: cannot access ‘/proc/23808/fdinfo/4’: No such file or directory
+0       /proc
+4792    /root
+du: cannot access ‘/run/user/1000/gvfs’: Permission denied
+2188    /run
+15112   /sbin
+16      /srv
+0       /sys
+3200    /tmp
+3094000 /usr
+370888  /var
+0       /vmlinuz
+baumbach@mintmath ~ $ sudo df
+Sorry, user baumbach is not allowed to execute '/bin/df' as root on mintmath.
+baumbach@mintmath ~ $ df
+df: ‘/run/user/1000/gvfs’: Permission denied
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/sda1        7608792 5045184   2154060  71% /
+none                   4       0         4   0% /sys/fs/cgroup
+udev              239736       4    239732   1% /dev
+tmpfs              50728    1156     49572   3% /run
+none                5120       0      5120   0% /run/lock
+none              253624     988    252636   1% /run/shm
+none              102400      56    102344   1% /run/user
+
+
+
+For the Root Directory has 2.15406 gb free and 5.045184 gb free
+
+
+
+baumbach@mintmath ~ $ mount
+/dev/sda1 on / type ext4 (rw,errors=remount-ro)
+proc on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+none on /sys/fs/cgroup type tmpfs (rw)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+none on /sys/kernel/security type securityfs (rw)
+udev on /dev type devtmpfs (rw,mode=0755)
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+none on /run/shm type tmpfs (rw,nosuid,nodev)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+none on /sys/fs/pstore type pstore (rw)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,noexec,nosuid,nodev
+)
+systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=
+systemd)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=bra
+kke)
+baumbach@mintmath ~ $ mkdir bootiso
+baumbach@mintmath ~ $ ls
+bootiso        hello3.txt  junk.c   newdir3  poem3
+hardstuff.txt  hello.c     newdir   poem     stuff.txt
+hello2.txt     hello.txt   newdir2  poem2    txt_files
+baumbach@mintmath ~ $ sudo mount -o loop /tmp/boot.iso
+mount: can't find /tmp/boot.iso in /etc/fstab or /etc/mtab
+baumbach@mintmath ~ $ sudo mount -o loop /tmp/boot.iso bootiso
+mount: block device /tmp/boot.iso is write-protected, mounting read-only
+baumbach@mintmath ~ $ ls bootiso
+isolinux  TRANS.TBL
+baumbach@mintmath ~ $ mount
+/dev/sda1 on / type ext4 (rw,errors=remount-ro)
+
+This ^^ filesystem is mounted on / and is a read/write filesystem
+
+
+proc on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+none on /sys/fs/cgroup type tmpfs (rw)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+none on /sys/kernel/security type securityfs (rw)
+udev on /dev type devtmpfs (rw,mode=0755)
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+none on /run/shm type tmpfs (rw,nosuid,nodev)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+none on /sys/fs/pstore type pstore (rw)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,noexec,nosuid,nodev
+)
+systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=
+systemd)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=bra
+kke)
+/tmp/boot.iso on /home/baumbach/bootiso type iso9660 (ro)
+baumbach@mintmath ~ $ sudo unmount bootiso
+sudo: unmount: command not found
+baumbach@mintmath ~ $ sudo umount bootiso
+baumbach@mintmath ~ $ mount
+/dev/sda1 on / type ext4 (rw,errors=remount-ro)
+proc on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+none on /sys/fs/cgroup type tmpfs (rw)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+none on /sys/kernel/security type securityfs (rw)
+udev on /dev type devtmpfs (rw,mode=0755)
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+none on /run/shm type tmpfs (rw,nosuid,nodev)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+none on /sys/fs/pstore type pstore (rw)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,noexec,nosuid,nodev
+)
+systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=
+systemd)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=bra
+kke)
+baumbach@mintmath ~ $ ls /proc
+1      1541   2008   2120   424   6939       consoles       misc
+10     1577   2017   2126   43    6940       cpuinfo        modules
+11     16     2028   2154   44    6977       crypto         mounts
+1137   1609   20328  22     440   6978       devices        mtrr
+1139   1612   2033   22119  448   7          diskstats      net
+1145   1623   2037   2350   4577  7140       dma            pagetypeinfo
+1146   1756   204    23514  465   7150       driver         partitions
+1149   1765   2040   23535  471   7155       execdomains    sched_debug
+1180   1770   2042   23547  473   7161       fb             schedstat
+1191   1775   2048   23548  486   7164       filesystems    scsi
+1193   1778   205    2356   488   7174       fs             self
+12     1781   2053   23561  489   721        interrupts     slabinfo
+1245   1782   2060   2357   5     734        iomem          softirqs
+127    18     2061   23793  504   745        ioports        stat
+1277   1853   2063   23838  505   761        ipmi           swaps
+1296   1857   2065   23854  521   790        irq            sys
+13     1860   2071   23857  527   8          kallsyms       sysrq-trigger
+1320   1870   2072   24     618   8717       kcore          sysvipc
+1336   1880   2073   25     66    8807       key-users      timer_list
+1364   1886   2074   26     660   9          kmsg           timer_stats
+1378   1891   2080   27     67    988        kpagecount     tty
+14     19     2092   28     670   acpi       kpageflags     uptime
+14596  1934   2099   29     6927  asound     latency_stats  version
+1476   1948   21     3      6930  buddyinfo  loadavg        version_signature
+15     19980  2114   348    6931  bus        locks          vmallocinfo
+1535   2      2115   353    6932  cgroups    mdstat         vmstat
+1539   20     2119   41     6936  cmdline    meminfo        zoneinfo
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $ cat /proc/filesystems
+nodev   sysfs
+nodev   rootfs
+nodev   ramfs
+nodev   bdev
+nodev   proc
+nodev   cgroup
+nodev   cpuset
+nodev   tmpfs
+nodev   devtmpfs
+nodev   debugfs
+nodev   securityfs
+nodev   sockfs
+nodev   pipefs
+nodev   anon_inodefs
+nodev   devpts
+        ext3
+        ext2
+        ext4
+nodev   hugetlbfs
+        vfat
+nodev   ecryptfs
+        fuseblk
+nodev   fuse
+nodev   fusectl
+nodev   pstore
+nodev   mqueue
+nodev   binfmt_misc
+nodev   vboxsf
+nodev   cifs
+        iso9660
+baumbach@mintmath ~ $ cat /proc/version
+Linux version 3.13.0-24-generic (buildd@roseapple) (gcc version 4.8.2 (Ubuntu 4.
+8.2-19ubuntu1) ) #46-Ubuntu SMP Thu Apr 10 19:08:14 UTC 2014

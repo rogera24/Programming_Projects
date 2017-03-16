@@ -1,0 +1,20 @@
+Linux Mint 17 Qianamintmath login: baumbach
+Password:
+Last login: Thu Sep 11 18:35:59 EDT 2014 from roger-desktop.susqu.edu on pts/4
+Welcome to Linux Mint 17 Qiana (GNU/Linux 3.13.0-24-generic i686)
+ 
+Welcome to Linux Mint
+ * Documentation:  http://www.linuxmint.com
+ 
+Hello, Youre Awesome and do not forget it! No seriosuly, DONT!
+ 
+baumbach@mintmath ~ $ sudo du -s /
+[sudo] password for baumbach:
+du: cannot access ‘/proc/2729/task/2729/fd/4’: No such file or directory
+du: cannot access ‘/proc/2729/task/2729/fdinfo/4’: No such file or directory
+du: cannot access ‘/proc/2729/fd/4’: No such file or directory
+du: cannot access ‘/proc/2729/fdinfo/4’: No such file or directory
+q
+5029476 /
+baumbach@mintmath ~ $ q
+q: command not found

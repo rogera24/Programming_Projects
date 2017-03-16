@@ -1,0 +1,265 @@
+Search:                                                                         Rï]
+File Name to Write:                                                             Rï]
+baumbach@mintmath ~ $ ls
+poem.txt  txt_files
+baumbach@mintmath ~ $ ln poem poem2
+ln: failed to access â€˜poemâ€™: No such file or directory
+baumbach@mintmath ~ $ ln poem.txt poem
+baumbach@mintmath ~ $ ls
+poem  poem.txt  txt_files
+baumbach@mintmath ~ $ ls -i poem*
+20209 poem  20209 poem.txt
+baumbach@mintmath ~ $ ln -s poem.txt poem2
+baumbach@mintmath ~ $ ls
+poem  poem2  poem.txt  txt_files
+baumbach@mintmath ~ $ ls -i poem*
+20209 poem  20210 poem2  20209 poem.txt
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      •(\
+File to insert [from ./] :                                                      C]
+File to insert [from ./] :                                                      C]
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    C]
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      %X]
+File to insert [from ./] :                                                      Ðm]
+File Name to Write:                                                             Ðm]
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    Ðm]
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    Ðm]
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      €=\
+File to insert [from ./] :                                                      •(\
+File to insert [from ./] :                                                      •(\
+File Name to Write:                                                             •(\
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    •(\
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      k¦_
+File to insert [from ./] :                                                      %X]
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    %X]
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      Rï]
+File to insert [from ./] :                                                      €=\
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    €=\
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $ cat poem.txt
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+baumbach@mintmath ~ $ cat poem
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+baumbach@mintmath ~ $ cat poem2
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+baumbach@mintmath ~ $ rm poem.txt
+baumbach@mintmath ~ $ cat poem2
+cat: poem2: No such file or directory
+baumbach@mintmath ~ $ cat poem
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+Hey My name is roger baumbach
+I am the greatest
+ 
+Hello
+baumbach@mintmath ~ $ rm poem2
+baumbach@mintmath ~ $ rm poem
+baumbach@mintmath ~ $ ls
+txt_files
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      €=\
+File Name to Write:                                                             •(\
+baumbach@mintmath ~ $ ln poem poem2
+baumbach@mintmath ~ $ ls
+poem  poem2  txt_files
+baumbach@mintmath ~ $ ln -s poem poem3
+baumbach@mintmath ~ $ ls -i poem*
+20209 poem  20209 poem2  20210 poem3
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      çUÀ\
+File to insert [from ./] :                                                      ¿Ò_
+File Name to Write:                                                             ¿Ò_
+Use "fg" to return to nano.W Where Is  ^V Next Page ^U UnCut Text^T To Spell
+ 
+[1]+  Stopped                 nano
+baumbach@mintmath ~ $ fg
+nano
+  GNU nano 2.2.6               File: poem2                                      NU©\
+Window size is too small for nano...s  ^V Next Page ^U UnCut Text^T To Spell
+baumbach@mintmath ~ $ ls
+poem  poem2  poem3  txt_files
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $ cat poem
+hello
+hellox2
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      ú]
+File to insert [from ./] :                                                      Uh\
+File Name to Write:                                                             Uh\
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    Uh\
+baumbach@mintmath ~ $ ls
+poem  poem2  poem3  txt_files
+baumbach@mintmath ~ $ cat poem
+hello
+hellox2
+hellox3
+baumbach@mintmath ~ $ rm poem
+baumbach@mintmath ~ $ cat poem2
+hello
+hellox2
+hellox3
+baumbach@mintmath ~ $ cat poem3
+cat: poem3: No such file or directory
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      çUÀ\
+File Name to Write:                                                             ¿Ò_
+baumbach@mintmath ~ $ ls
+poem  poem2  poem3  txt_files
+baumbach@mintmath ~ $ cat poem
+yellow
+baumbach@mintmath ~ $ cat poem2
+hello
+hellox2
+hellox3
+baumbach@mintmath ~ $ cat poem3
+yellow
+baumbach@mintmath ~ $ file *
+poem:      ASCII text
+poem2:     ASCII text
+poem3:     symbolic link to `poem'
+txt_files: directory
+baumbach@mintmath ~ $ file .*
+.:             directory
+..:            directory
+.bash_history: ASCII text
+.bash_logout:  ASCII text
+.cache:        directory
+.config:       directory
+.mozilla:      directory
+.profile:      ASCII text
+baumbach@mintmath ~ $ file /bin/ls
+/bin/ls: ELF 32-bit LSB  executable, Intel 80386, version 1 (SYSV), dynamically
+linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=65712df1823644e0f
+33ac559526fe648a40353f9, stripped
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      NU©\
+File Name to Write:                                                             SU”\
+baumbach@mintmath ~ $ ls
+hello.c  poem  poem2  poem3  txt_files
+baumbach@mintmath ~ $ file
+Usage: file [-bchikLlNnprsvz0] [--apple] [--mime-encoding] [--mime-type]
+            [-e testname] [-F separator] [-f namefile] [-m magicfiles] file ...
+       file -C [-m magicfiles]
+       file [--help]
+baumbach@mintmath ~ $ file *
+hello.c:   C source, ASCII text
+poem:      ASCII text
+poem2:     ASCII text
+poem3:     symbolic link to `poem'
+txt_files: directory
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      ®]
+File Name to Write:                                                             ŒÁ\
+baumbach@mintmath ~ $ ls
+hello.c  junk.c  poem  poem2  poem3  txt_files
+baumbach@mintmath ~ $ file *
+hello.c:   C source, ASCII text
+junk.c:    ASCII text
+poem:      ASCII text
+poem2:     ASCII text
+poem3:     symbolic link to `poem'
+txt_files: directory
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      NU©\
+File to insert [from ./] :                                                      SU”\
+File Name to Write:                                                             SU”\
+baumbach@mintmath ~ $ file *
+hello.c:   C source, ASCII text
+junk.c:    ASCII text
+poem:      ASCII text
+poem2:     ASCII text
+poem3:     symbolic link to `poem'
+txt_files: directory
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      Ôi\
+File to insert [from ./] :                                                      ú]
+ 
+File Name to Write:                                                             ú]
+baumbach@mintmath ~ $ file *
+hello.c:   C source, ASCII text
+junk.c:    ASCII text
+poem:      ASCII text
+poem2:     ASCII text
+poem3:     symbolic link to `poem'
+txt_files: directory
+baumbach@mintmath ~ $ logout
+ 
+Bye Bye Mr. Amazing!
+ 
+Linux Mint 17 Qianamintmath login: baumbach
+Password:
+ 
+Login incorrect
+mintmath login: baumbach
+Password:
+Last login: Tue Sep  2 11:24:27 EDT 2014 from roger-desktop.susqu.edu on pts/4
+Welcome to Linux Mint 17 Qiana (GNU/Linux 3.13.0-24-generic i686)
+ 
+Welcome to Linux Mint
+ * Documentation:  http://www.linuxmint.com
+ 
+Hello, Youre Awesome and do not forget it! No seriosuly, DONT!
+ 
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      ’UÕ\
+File Name to Write:                                                             M€\
+File to insert [from ./] :                                                      M€\
+ 
+File Name to Write:                                                             SU”\
+baumbach@mintmath ~ $ file *
+hello.c:   ASCII text
+junk.c:    ASCII text
+poem:      ASCII text
+poem2:     ASCII text
+poem3:     symbolic link to `poem'
+txt_files: directory

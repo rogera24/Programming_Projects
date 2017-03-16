@@ -1,0 +1,8 @@
+My Mutex thread had a 1:18.805 ratio or, .154 seconds to 2.896 seconds ratio.
+
+All the threads do not get equal counts. The threads play round robin a little but not a full round the robin. They are off by at most 100,000.
+
+They do execute randomly at each lock. My counts show that they do differ.
+
+The Mutex helped to schedule the processes the best that it could but in fact it just made sure the number was correct and that it got "close"
+	to the goal of 3,000,000 which it never hit. It always went over the count by two or three.

@@ -1,0 +1,18 @@
+1) a-c) I noticed that it takes another number for the inonumber for the soft link but uses the same for the hard link. They still are the
+	same file though. If one is touched so is the other. 
+
+2) The changes are present because it is the same file.
+
+3) Yes the changes are present because they are the same files.
+
+4) My soft link has no ability to cat anything but the hard link still has the file data. The soft link was only a shortcut to the data were
+	as the hard link was an actual copy.
+
+5) Poem and poem3 have the same contents but poem2 has old contents because poem2 was an exact copy and 3 was a shortcut to it.
+
+6) My computer states I cannot make a soft link with msdos, running as admin overloads the buffer for cmd, so I cant even see the files in the list.
+
+7) If I drag the file it opens the file, if I drag the shortvut, it tries to open the cmd command in text and reads out symbols.
+
+9) Well it says that it a C Source file. It doesnt recognize junk because it is just plain text when it looked at it. I noticed that it picks
+	up on any line of code that it can compile and build like the main loop or the #include.

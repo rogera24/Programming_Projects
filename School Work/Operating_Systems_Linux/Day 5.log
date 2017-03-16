@@ -1,0 +1,3 @@
+baumbach@mintmath ~ $ chmod 700 $HOME
+baumbach@mintmath ~ $ ls -ld
+drwx------ 6 baumbach baumbach 4096 Sep  4 12:19 .

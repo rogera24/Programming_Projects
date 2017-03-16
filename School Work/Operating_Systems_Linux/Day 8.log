@@ -1,0 +1,1784 @@
+baumbach@mintmath ~ $ ls -l *.c | sort | more
+-rw-rw-r-- 1 baumbach baumbach 30 Sep  2 11:44 junk.c
+-rw-rw-r-- 1 baumbach baumbach 30 Sep  2 11:48 hello.c
+baumbach@mintmath ~ $ cat poem | sort | tee poemsort
+yellow
+baumbach@mintmath ~ $ cat nosuchfile2>error.log
+cat: nosuchfile2: No such file or directory
+baumbach@mintmath ~ $ cat nosuchfile 2>error.log
+baumbach@mintmath ~ $ ps -ae | grep gedit | tee /dev/tty | wc
+      0       0       0
+baumbach@mintmath ~ $ tee session.log | bash | tee session.log
+asflkjfas
+bash: line 1: asflkjfas: command not found
+adsfkl
+bash: line 2: adsfkl: command not found
+kill
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill
+-l [sigspec]
+tee session.log | c^Hbash^H^H^H
+bash: line 4: $'c\bbash\b\b\b': command not found
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+fka
+bash: line 16: fka: command not found
+ad
+bash: line 17: ad: command not found
+ad
+bash: line 18: ad: command not found
+da
+bash: line 19: da: command not found
+da
+bash: line 20: da: command not found
+da
+bash: line 21: da: command not found
+da
+bash: line 22: da: command not found
+da
+bash: line 23: da: command not found
+da
+bash: line 24: da: command not found
+ad
+bash: line 25: ad: command not found
+da
+bash: line 26: da: command not found
+da
+bash: line 27: da: command not found
+da
+bash: line 28: da: command not found
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ad
+bash: line 50: ad: command not found
+qi^Huit
+bash: line 51: $'qi\buit': command not found
+quit
+bash: line 52: quit: command not found
+kill this
+bash: line 53: kill: this: arguments must be process or job IDs
+wt^H^H^H
+bash: line 54: $'wt\b\b\b': command not found
+ps
+  PID TTY          TIME CMD
+ 2629 pts/4    00:00:00 bash
+ 2662 pts/4    00:00:00 tee
+ 2663 pts/4    00:00:00 bash
+ 2664 pts/4    00:00:00 tee
+ 2690 pts/4    00:00:00 ps
+cat > junk
+^Z
+[1]+  Stopped                 tee session.log | bash | tee session.log
+baumbach@mintmath ~ $ ps
+  PID TTY          TIME CMD
+ 2629 pts/4    00:00:00 bash
+ 2662 pts/4    00:00:00 tee
+ 2663 pts/4    00:00:00 bash
+ 2664 pts/4    00:00:00 tee
+ 2692 pts/4    00:00:00 cat
+ 2693 pts/4    00:00:00 ps
+baumbach@mintmath ~ $ kill pid 2692
+-bash: kill: pid: arguments must be process or job IDs
+baumbach@mintmath ~ $ kill 2692
+baumbach@mintmath ~ $ ps
+  PID TTY          TIME CMD
+ 2629 pts/4    00:00:00 bash
+ 2662 pts/4    00:00:00 tee
+ 2663 pts/4    00:00:00 bash
+ 2664 pts/4    00:00:00 tee
+ 2692 pts/4    00:00:00 cat
+ 2696 pts/4    00:00:00 ps
+baumbach@mintmath ~ $ fg
+tee session.log | bash | tee session.log
+bash: line 56:  2692 Terminated              cat > junk
+top]
+bash: line 57: top]: command not found
+top
+top: failed tty get
+ps
+  PID TTY          TIME CMD
+ 2629 pts/4    00:00:00 bash
+ 2662 pts/4    00:00:00 tee
+ 2663 pts/4    00:00:00 bash
+ 2664 pts/4    00:00:00 tee
+ 2700 pts/4    00:00:00 ps
+^Z
+[1]+  Stopped                 tee session.log | bash | tee session.log
+baumbach@mintmath ~ $ top
+top - 18:45:19 up  6:33,  3 users,  load average: 1.40, 1.42, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.0 us, 62.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.1 si,  0.0 st
+KiB Mem:    507252 total,   495372 used,    11880 free,     4436 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60296 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  41992  33712 R 44.3  8.3 311:16.30 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 28.2 15.0  67:48.09 mdmwebkit
+ 2701 baumbach  20   0    5428   1300    984 R 16.1  0.3   0:00.08 top
+    7 root      20   0       0      0      0 S  4.0  0.0   0:10.76 rcu_sched
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.74 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.74 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+   14 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback
+   15 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+top - 18:45:22 up  6:33,  3 users,  load average: 1.40, 1.42, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.1 us, 64.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.7 si,  0.0 st
+KiB Mem:    507252 total,   496884 used,    10368 free,     4436 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  44632  33712 R 78.4  8.8 311:18.69 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 17.7 15.0  67:48.63 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.3  0.1   3:05.66 VBoxService
+ 1578 root      20   0  385876 340856   1012 S  1.0 67.2   4:27.58 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  0.7  0.3   0:00.10 top
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.16 kworker/0:2
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:09.98 dbus-daemon
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.09 nmbd
+ 1354 kernoops  20   0    6392    700    632 S  0.3  0.1   0:05.74 kerneloops
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.08 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.74 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.76 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:45:25 up  6:33,  3 users,  load average: 1.45, 1.43, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.4 us, 62.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.6 si,  0.0 st
+KiB Mem:    507252 total,   496176 used,    11076 free,     4436 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42784  33712 R 79.1  8.4 311:21.13 Xorg
+ 1414 mdm       20   0  429824  75888  37980 R 16.8 15.0  67:49.15 mdmwebkit
+ 1578 root      20   0  385876 340856   1012 S  1.3 67.2   4:27.62 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.14 top
+    3 root      20   0       0      0      0 S  0.6  0.0   0:55.76 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.18 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.6  0.2   0:55.11 nmbd
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:05.68 VBoxService
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.76 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.74 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:45:28 up  6:33,  3 users,  load average: 1.41, 1.42, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.4 us, 64.6 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st
+KiB Mem:    507252 total,   495768 used,    11484 free,     4436 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  41464  33712 R 78.0  8.2 311:23.54 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 17.2 15.0  67:49.68 mdmwebkit
+ 1578 root      20   0  385876 340856   1012 S  1.3 67.2   4:27.66 rtvscand
+ 1418 root      20   0   29756   1824   1824 S  0.6  0.4   0:15.56 console-kit+
+ 2701 baumbach  20   0    5432   1340   1012 R  0.6  0.3   0:00.16 top
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.19 kworker/0:2
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:09.99 dbus-daemon
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:05.69 VBoxService
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.89 kworker/u2:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.09 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.76 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.76 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:45:31 up  6:33,  3 users,  load average: 1.41, 1.42, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.5 us, 60.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.3 si,  0.0 st
+KiB Mem:    507252 total,   497156 used,    10096 free,     4440 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  43048  33712 R 77.3  8.5 311:25.91 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 17.3 15.0  67:50.21 mdmwebkit
+  118 root      20   0       0      0      0 S  1.0  0.0   1:24.22 kworker/0:2
+ 1578 root      20   0  385876 340856   1012 S  1.0 67.2   4:27.69 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.19 top
+ 2674 root       0 -20       0      0      0 S  0.7  0.0   0:00.06 kworker/u3:1
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.77 ksoftirqd/0
+  205 root      20   0       0      0      0 S  0.3  0.0   0:03.98 jbd2/sda1-8
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:05.70 VBoxService
+ 2229 root       0 -20       0      0      0 S  0.3  0.0   0:00.12 kworker/u3:0
+ 
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.76 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.74 watchdog/0
+top - 18:45:35 up  6:33,  3 users,  load average: 1.38, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.3 us, 62.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.4 si,  0.0 st
+KiB Mem:    507252 total,   499400 used,     7852 free,     4440 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  45952  33712 R 76.1  9.1 311:28.25 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 18.5 15.0  67:50.78 mdmwebkit
+ 1578 root      20   0  385876 340856   1012 S  2.0 67.2   4:27.75 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.23 top
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.24 kworker/0:2
+ 1405 root      20   0    9600    592    516 S  0.7  0.1   3:05.72 VBoxService
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.78 ksoftirqd/0
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.12 nmbd
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.90 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.76 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.74 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:45:38 up  6:33,  3 users,  load average: 1.38, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 37.2 us, 61.5 sy,  0.0 ni,  0.3 id,  0.0 wa,  0.0 hi,  1.0 si,  0.0 st
+KiB Mem:    507252 total,   494884 used,    12368 free,     4440 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  41200  33712 R 76.3  8.1 311:30.59 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 17.9 15.0  67:51.33 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  2.0  0.1   3:05.78 VBoxService
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.26 kworker/0:2
+ 1578 root      20   0  385876 340856   1012 S  0.7 67.2   4:27.77 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  0.7  0.3   0:00.25 top
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.77 rcu_sched
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.75 watchdog/0
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.13 nmbd
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.10 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.78 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:45:41 up  6:33,  3 users,  load average: 1.35, 1.41, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.3 us, 62.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem:    507252 total,   498768 used,     8484 free,     4440 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  45160  33712 R 78.5  8.9 311:33.00 Xorg
+ 1414 mdm       20   0  429824  75888  37980 R 18.9 15.0  67:51.91 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.28 top
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.28 kworker/0:2
+ 1578 root      20   0  385876 340856   1012 S  0.7 67.2   4:27.79 rtvscand
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.79 ksoftirqd/0
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.14 nmbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:05.79 VBoxService
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.91 kworker/u2:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.11 in.telnetd
+ 
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.77 rcu_sched
+ 
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.75 watchdog/0
+top - 18:45:44 up  6:33,  3 users,  load average: 1.40, 1.42, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 37.4 us, 61.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   496568 used,    10684 free,     4440 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  43312  33712 R 78.3  8.5 311:35.42 Xorg
+ 1414 mdm       20   0  429824  75888  37980 S 17.5 15.0  67:52.45 mdmwebkit
+ 1578 root      20   0  385876 340856   1012 S  1.0 67.2   4:27.82 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.31 top
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:05.81 VBoxService
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.76 watchdog/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.29 kworker/0:2
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:10.00 dbus-daemon
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.24 NetworkMana+
+ 1418 root      20   0   29756   1824   1824 S  0.3  0.4   0:15.57 console-kit+
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.12 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.79 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.77 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+top - 18:45:47 up  6:33,  3 users,  load average: 1.40, 1.42, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.7 us, 64.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem:    507252 total,   495956 used,    11296 free,     4440 buffers
+KiB Swap:   522236 total,    58708 used,   463528 free.    60288 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42256  33712 R 77.7  8.3 311:37.82 Xorg
+ 1414 mdm       20   0  429824  75888  37980 R 18.1 15.0  67:53.01 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.3  0.1   3:05.85 VBoxService
+ 1578 root      20   0  385876 340856   1012 S  1.0 67.2   4:27.85 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.34 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.80 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.30 kworker/0:2
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.25 NetworkMana+
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.92 kworker/u2:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.13 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.77 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.76 watchdog/0
+top - 18:45:50 up  6:33,  3 users,  load average: 1.37, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.8 us, 63.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st
+KiB Mem:    507252 total,   501044 used,     6208 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60236 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  47800  33712 R 77.8  9.4 311:40.24 Xorg
+ 1414 mdm       20   0  429948  75904  37980 S 16.4 15.0  67:53.52 mdmwebkit
+ 1578 root      20   0  385876 340732   1012 S  1.3 67.2   4:27.89 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.37 top
+   25 root      20   0       0      0      0 S  0.6  0.0   0:10.27 kswapd0
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:05.87 VBoxService
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.78 rcu_sched
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.31 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.15 nmbd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.80 ksoftirqd/0
+ 
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.76 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:45:53 up  6:33,  3 users,  load average: 1.37, 1.41, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.4 us, 62.3 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem:    507252 total,   497192 used,    10060 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60232 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  44104  33712 R 77.5  8.7 311:42.62 Xorg
+ 1414 mdm       20   0  429948  75904  37980 R 18.2 15.0  67:54.08 mdmwebkit
+ 1578 root      20   0  385876 340732   1012 S  1.3 67.2   4:27.93 rtvscand
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:05.90 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  0.7  0.3   0:00.39 top
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.79 rcu_sched
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.32 kworker/0:2
+ 1418 root      20   0   29756   1824   1824 S  0.3  0.4   0:15.58 console-kit+
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.14 in.telnetd
+ 
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.80 ksoftirqd/0
+ 
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.76 watchdog/0
+top - 18:45:56 up  6:33,  3 users,  load average: 1.34, 1.40, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 32.9 us, 65.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   493604 used,    13648 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60232 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  40676  33712 R 79.1  8.0 311:45.08 Xorg
+ 1414 mdm       20   0  429948  75904  37980 R 17.4 15.0  67:54.62 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.6  0.3   0:00.44 top
+  118 root      20   0       0      0      0 S  1.0  0.0   1:24.35 kworker/0:2
+ 1578 root      20   0  385876 340732   1012 S  1.0 67.2   4:27.96 rtvscand
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.81 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.80 rcu_sched
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.15 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.76 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+top - 18:45:59 up  6:34,  3 users,  load average: 1.39, 1.41, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.6 us, 65.1 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem:    507252 total,   496704 used,    10548 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60232 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43840  33712 R 77.3  8.6 311:47.48 Xorg
+ 1414 mdm       20   0  429948  75904  37980 S 17.1 15.0  67:55.15 mdmwebkit
+ 1578 root      20   0  385876 340732   1012 S  1.9 67.2   4:28.02 rtvscand
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:05.93 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.47 top
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.36 kworker/0:2
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.16 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 R  0.0  0.0   0:55.81 ksoftirqd/0
+ 
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.80 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.76 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:46:02 up  6:34,  3 users,  load average: 1.39, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.5 us, 64.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  0.7 si,  0.0 st
+KiB Mem:    507252 total,   497540 used,     9712 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60232 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43840  33712 R 77.4  8.6 311:49.86 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 17.2 15.0  67:55.68 mdmwebkit
+ 1578 root      20   0  385876 340732   1012 S  1.3 67.2   4:28.06 rtvscand
+ 1405 root      20   0    9600    592    516 S  0.7  0.1   3:05.95 VBoxService
+ 1519 root      20   0    3136    532    424 S  0.7  0.1   0:07.80 symcfgd
+ 2701 baumbach  20   0    5432   1340   1012 R  0.7  0.3   0:00.49 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.82 ksoftirqd/0
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.77 watchdog/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.37 kworker/0:2
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:10.01 dbus-daemon
+ 1418 root      20   0   29756   1824   1824 S  0.3  0.4   0:15.59 console-kit+
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.93 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.80 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+top - 18:46:05 up  6:34,  3 users,  load average: 1.44, 1.42, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 37.3 us, 61.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem:    507252 total,   493572 used,    13680 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60232 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  46480  33712 R 78.7  9.2 311:52.28 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 17.6 15.0  67:56.22 mdmwebkit
+ 1578 root      20   0  385876 340732   1012 S  1.6 67.2   4:28.11 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.52 top
+ 1405 root      20   0    9600    592    516 S  0.7  0.1   3:05.97 VBoxService
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.38 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.16 nmbd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.82 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.80 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.77 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:46:08 up  6:34,  3 users,  load average: 1.41, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.5 us, 61.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   496660 used,    10592 free,     4440 buffers
+KiB Swap:   522236 total,    58832 used,   463404 free.    60232 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  43840  33712 R 76.8  8.6 311:54.64 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 18.9 15.0  67:56.80 mdmwebkit
+ 1578 root      20   0  385876 340732   1012 S  1.3 67.2   4:28.15 rtvscand
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.00 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.55 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.83 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.39 kworker/0:2
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.17 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+ 
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.80 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.77 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:46:12 up  6:34,  3 users,  load average: 1.41, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.5 us, 62.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.0 si,  0.0 st
+KiB Mem:    507252 total,   493952 used,    13300 free,     4440 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  41464  33712 R 76.6  8.2 311:56.98 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 18.7 15.0  67:57.37 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.6 67.1   4:28.20 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.59 top
+  118 root      20   0       0      0      0 S  1.0  0.0   1:24.42 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  1.0  0.2   0:55.19 nmbd
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.84 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.81 rcu_sched
+   25 root      20   0       0      0      0 S  0.3  0.0   0:10.28 kswapd0
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.26 NetworkMana+
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.01 VBoxService
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.94 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:46:15 up  6:34,  3 users,  load average: 1.37, 1.41, 1.41
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 32.6 us, 64.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.3 si,  0.0 st
+KiB Mem:    507252 total,   494064 used,    13188 free,     4440 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  40676  33712 R 75.9  8.0 311:59.34 Xorg
+ 1414 mdm       20   0  430464  75904  37980 R 17.7 15.0  67:57.92 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.3  0.1   3:06.05 VBoxService
+ 1578 root      20   0  385876 340500   1012 S  1.0 67.1   4:28.23 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.62 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.44 kworker/0:2
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.85 ksoftirqd/0
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.20 nmbd
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.18 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.81 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.77 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:46:18 up  6:34,  3 users,  load average: 1.37, 1.41, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.4 us, 61.3 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st
+KiB Mem:    507252 total,   499716 used,     7536 free,     4440 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  46216  33712 R 76.8  9.1 312:01.74 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 16.6 15.0  67:58.44 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.6 67.1   4:28.28 rtvscand
+    7 root      20   0       0      0      0 S  1.0  0.0   0:10.84 rcu_sched
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.65 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.46 kworker/0:2
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:06.07 VBoxService
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.78 watchdog/0
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.21 nmbd
+ 1418 root      20   0   29756   1824   1824 S  0.3  0.4   0:15.60 console-kit+
+ 1519 root      20   0    3136    532    424 S  0.3  0.1   0:07.81 symcfgd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.85 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:46:21 up  6:34,  3 users,  load average: 1.34, 1.40, 1.41
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 38.0 us, 60.3 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   495896 used,    11356 free,     4440 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42784  33712 R 79.2  8.4 312:04.17 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 17.9 15.0  67:58.99 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.68 top
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.48 kworker/0:2
+ 1578 root      20   0  385876 340500   1012 S  0.7 67.1   4:28.30 rtvscand
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.86 ksoftirqd/0
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.22 nmbd
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.19 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.84 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:46:24 up  6:34,  3 users,  load average: 1.32, 1.39, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.5 us, 62.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st
+KiB Mem:    507252 total,   493548 used,    13704 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  40936  33712 R 76.7  8.1 312:06.53 Xorg
+ 1414 mdm       20   0  430464  75904  37980 S 17.5 15.0  67:59.53 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.0 67.1   4:28.33 rtvscand
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.50 kworker/0:2
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:06.09 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  0.6  0.3   0:00.70 top
+  205 root      20   0       0      0      0 S  0.3  0.0   0:03.99 jbd2/sda1-8
+ 1354 kernoops  20   0    6392    700    632 S  0.3  0.1   0:05.75 kerneloops
+ 2229 root       0 -20       0      0      0 S  0.3  0.0   0:00.13 kworker/u3:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.20 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.86 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.84 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:46:27 up  6:34,  3 users,  load average: 1.32, 1.39, 1.40
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.4 us, 65.6 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.0 si,  0.0 st
+KiB Mem:    507252 total,   495864 used,    11388 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42784  33712 R 78.4  8.4 312:08.93 Xorg
+ 1414 mdm       20   0  430464  76164  37980 R 18.3 15.0  68:00.09 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.0 67.1   4:28.36 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.73 top
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.52 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.23 nmbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.10 VBoxService
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.86 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.84 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:46:30 up  6:34,  3 users,  load average: 1.29, 1.39, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.0 us, 65.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   500860 used,     6392 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  48592  33712 R 79.3  9.6 312:11.38 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 16.8 15.0  68:00.61 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.77 top
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.13 VBoxService
+ 1578 root      20   0  385876 340500   1012 S  1.0 67.1   4:28.39 rtvscand
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.54 kworker/0:2
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.27 NetworkMana+
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.24 nmbd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.86 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.84 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:46:33 up  6:34,  3 users,  load average: 1.27, 1.38, 1.40
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.5 us, 62.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st
+KiB Mem:    507252 total,   493584 used,    13668 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  40676  33712 R 77.8  8.0 312:13.79 Xorg
+ 1414 mdm       20   0  430464  76164  37980 R 18.1 15.0  68:01.17 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.0 67.1   4:28.42 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.80 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.87 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.85 rcu_sched
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.55 kworker/0:2
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:10.02 dbus-daemon
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.14 VBoxService
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.95 kworker/u2:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.21 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+top - 18:46:36 up  6:34,  3 users,  load average: 1.27, 1.38, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.1 us, 62.3 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   498816 used,     8436 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  45952  33712 R 78.2  9.1 312:16.22 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 17.4 15.0  68:01.71 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.84 top
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.17 VBoxService
+ 1578 root      20   0  385876 340500   1012 S  0.6 67.1   4:28.44 rtvscand
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.88 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.86 rcu_sched
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.56 kworker/0:2
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.22 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:46:39 up  6:34,  3 users,  load average: 1.25, 1.37, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.5 us, 62.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.0 si,  0.0 st
+KiB Mem:    507252 total,   493488 used,    13764 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  46480  33712 R 78.3  9.2 312:18.63 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 18.2 15.0  68:02.27 mdmwebkit
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.58 kworker/0:2
+ 1578 root      20   0  385876 340500   1012 S  0.6 67.1   4:28.46 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  0.6  0.3   0:00.86 top
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.96 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.88 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.86 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+top - 18:46:42 up  6:34,  3 users,  load average: 1.25, 1.37, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.2 us, 62.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   496696 used,    10556 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43840  33712 R 78.2  8.6 312:21.03 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 18.6 15.0  68:02.84 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.0 67.1   4:28.49 rtvscand
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.60 kworker/0:2
+ 1405 root      20   0    9600    592    516 S  0.7  0.1   3:06.19 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  0.7  0.3   0:00.88 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.89 ksoftirqd/0
+ 1418 root      20   0   29756   1824   1824 S  0.3  0.4   0:15.61 console-kit+
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.23 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.86 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:46:46 up  6:34,  3 users,  load average: 1.23, 1.37, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 37.0 us, 61.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.7 si,  0.0 st
+KiB Mem:    507252 total,   496944 used,    10308 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43576  33712 R 77.8  8.6 312:23.43 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 17.2 15.0  68:03.37 mdmwebkit
+ 1578 root      20   0  385876 340500   1012 S  1.3 67.1   4:28.53 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:00.91 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.62 kworker/0:2
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.90 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.87 rcu_sched
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.25 nmbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.20 VBoxService
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.24 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+ 
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+top - 18:46:49 up  6:34,  3 users,  load average: 1.29, 1.38, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.8 us, 65.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.0 si,  0.0 st
+KiB Mem:    507252 total,   498448 used,     8804 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  44632  33712 R 80.8  8.8 312:25.91 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 16.3 15.0  68:03.87 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.95 top
+ 1405 root      20   0    9600    592    516 S  0.7  0.1   3:06.22 VBoxService
+ 1578 root      20   0  385876 340500   1012 S  0.3 67.1   4:28.54 rtvscand
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.90 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.87 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.78 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+   14 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback
+top - 18:46:52 up  6:34,  3 users,  load average: 1.29, 1.38, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.2 us, 62.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st
+KiB Mem:    507252 total,   497292 used,     9960 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  44368  33712 R 78.2  8.7 312:28.33 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 18.1 15.0  68:04.43 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:00.99 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.64 kworker/0:2
+ 1578 root      20   0  385876 340500   1012 S  0.6 67.1   4:28.56 rtvscand
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.91 ksoftirqd/0
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.79 watchdog/0
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:13.97 kworker/u2:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.25 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.87 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:46:55 up  6:34,  3 users,  load average: 1.35, 1.39, 1.40
+Tasks: 103 total,   2 running,  98 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.9 us, 63.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st
+KiB Mem:    507252 total,   493512 used,    13740 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  46708  33712 R 79.3  9.2 312:30.77 Xorg
+ 1414 mdm       20   0  430464  76164  37980 S 16.9 15.0  68:04.95 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:06.24 VBoxService
+ 1418 root      20   0   29756   1824   1824 S  0.6  0.4   0:15.63 console-kit+
+ 1578 root      20   0  385876 340500   1012 S  0.6 67.1   4:28.58 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  0.6  0.3   0:01.01 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.92 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.65 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.26 nmbd
+ 
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.87 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.79 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:46:58 up  6:34,  3 users,  load average: 1.35, 1.39, 1.40
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.3 us, 65.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.7 si,  0.0 st
+KiB Mem:    507252 total,   496880 used,    10372 free,     4448 buffers
+KiB Swap:   522236 total,    59064 used,   463172 free.    60056 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42784  33712 R 76.5  8.4 312:33.13 Xorg
+ 1414 mdm       20   0  430464  76428  37980 R 18.2 15.1  68:05.51 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.3  0.1   3:06.28 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.04 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.67 kworker/0:2
+ 1578 root      20   0  385876 340500   1012 S  0.6 67.1   4:28.60 rtvscand
+ 2324 root      20   0       0      0      0 S  0.6  0.0   0:13.99 kworker/u2:0
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.93 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.88 rcu_sched
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:10.03 dbus-daemon
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.26 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.79 watchdog/0
+top - 18:47:01 up  6:35,  3 users,  load average: 1.32, 1.38, 1.40
+Tasks: 103 total,   3 running,  97 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 32.2 us, 66.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem:    507252 total,   496300 used,    10952 free,     4448 buffers
+KiB Swap:   522236 total,    59148 used,   463088 free.    59984 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42784  33712 R 78.0  8.4 312:35.54 Xorg
+ 1414 mdm       20   0  430464  76428  37980 R 18.1 15.1  68:06.07 mdmwebkit
+ 1578 root      20   0  385876 340416   1012 S  1.0 67.1   4:28.63 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.07 top
+   25 root      20   0       0      0      0 S  0.6  0.0   0:10.30 kswapd0
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.94 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.68 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.27 nmbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.29 VBoxService
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.27 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.88 rcu_sched
+ 
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:47:04 up  6:35,  3 users,  load average: 1.37, 1.39, 1.40
+Tasks: 105 total,   2 running, 100 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.2 us, 63.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st
+KiB Mem:    507252 total,   493636 used,    13616 free,     4452 buffers
+KiB Swap:   522236 total,    59504 used,   462732 free.    59724 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  101728  40676  33712 R 74.3  8.0 312:37.83 Xorg
+ 1414 mdm       20   0  430464  76420  37980 S 16.2 15.1  68:06.57 mdmwebkit
+   25 root      20   0       0      0      0 S  1.6  0.0   0:10.35 kswapd0
+ 1578 root      20   0  385876 340068   1012 S  1.3 67.0   4:28.67 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:01.11 top
+ 2705 root      20   0    6216   1672   1136 S  1.3  0.3   0:00.04 login
+ 2704 telnetd   20   0    2636   1016    836 S  1.0  0.2   0:00.03 in.telnetd
+    7 root      20   0       0      0      0 S  0.6  0.0   0:10.90 rcu_sched
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.70 kworker/0:2
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:06.31 VBoxService
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.28 NetworkMana+
+ 1222 root      20   0    3060    600    504 S  0.3  0.1   0:01.00 cron
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.28 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.94 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+top - 18:47:07 up  6:35,  3 users,  load average: 1.37, 1.39, 1.40
+Tasks: 105 total,   3 running,  99 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.8 us, 63.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st
+KiB Mem:    507252 total,   498592 used,     8660 free,     4452 buffers
+KiB Swap:   522236 total,    59504 used,   462732 free.    59716 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  45160  33712 R 77.2  8.9 312:40.23 Xorg
+ 1414 mdm       20   0  430464  76420  37980 R 17.7 15.1  68:07.12 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.34 VBoxService
+ 1578 root      20   0  385876 340068   1012 S  1.0 67.0   4:28.70 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.14 top
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.95 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.71 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.28 nmbd
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.00 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.90 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.79 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:47:10 up  6:35,  3 users,  load average: 1.42, 1.40, 1.41
+Tasks: 104 total,   2 running,  99 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 32.2 us, 64.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.0 si,  0.0 st
+KiB Mem:    507252 total,   500072 used,     7180 free,     4460 buffers
+KiB Swap:   522236 total,    59788 used,   462448 free.    59552 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  46744  33712 R 77.7  9.2 312:42.63 Xorg
+ 1414 mdm       20   0  431492  76420  37980 S 16.5 15.1  68:07.63 mdmwebkit
+ 1578 root      20   0  385876 339784   1012 S  1.0 67.0   4:28.73 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.17 top
+   25 root      20   0       0      0      0 S  0.6  0.0   0:10.37 kswapd0
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:06.36 VBoxService
+ 2674 root       0 -20       0      0      0 S  0.6  0.0   0:00.08 kworker/u3:1
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.96 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.91 rcu_sched
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.72 kworker/0:2
+  205 root      20   0       0      0      0 S  0.3  0.0   0:04.00 jbd2/sda1-8
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.29 nmbd
+ 1418 root      20   0   29756   1824   1824 S  0.3  0.4   0:15.64 console-kit+
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.29 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+top - 18:47:13 up  6:35,  3 users,  load average: 1.47, 1.41, 1.41
+Tasks: 104 total,   2 running,  99 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.8 us, 62.6 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.7 si,  0.0 st
+KiB Mem:    507252 total,   495852 used,    11400 free,     4460 buffers
+KiB Swap:   522236 total,    59788 used,   462448 free.    59552 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  41728  33712 R 75.6  8.2 312:44.95 Xorg
+ 1414 mdm       20   0  431492  76420  37980 S 18.9 15.1  68:08.21 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.6  0.1   3:06.41 VBoxService
+ 1578 root      20   0  385876 339784   1012 S  1.0 67.0   4:28.76 rtvscand
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.74 kworker/0:2
+ 2701 baumbach  20   0    5432   1340   1012 R  0.7  0.3   0:01.19 top
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.29 NetworkMana+
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.30 nmbd
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.30 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.96 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.91 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.79 watchdog/0
+top - 18:47:16 up  6:35,  3 users,  load average: 1.47, 1.41, 1.41
+Tasks: 104 total,   2 running,  99 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 33.6 us, 62.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.9 si,  0.0 st
+KiB Mem:    507252 total,   493544 used,    13708 free,     4460 buffers
+KiB Swap:   522236 total,    59788 used,   462448 free.    59552 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  48592  33712 R 77.4  9.6 312:47.33 Xorg
+ 1414 mdm       20   0  431492  76420  37980 S 17.2 15.1  68:08.74 mdmwebkit
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:01.23 top
+ 1578 root      20   0  385876 339784   1012 S  1.0 67.0   4:28.79 rtvscand
+ 2704 telnetd   20   0    2636   1016    836 S  1.0  0.2   0:00.06 in.telnetd
+  118 root      20   0       0      0      0 S  0.7  0.0   1:24.76 kworker/0:2
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.97 ksoftirqd/0
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.42 VBoxService
+ 1519 root      20   0    3136    532    424 S  0.3  0.1   0:07.82 symcfgd
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.01 kworker/u2:0
+ 2705 root      20   0    6352   1848   1284 S  0.3  0.4   0:00.05 login
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.91 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:47:19 up  6:35,  4 users,  load average: 1.59, 1.44, 1.42
+Tasks: 106 total,   2 running, 101 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 31.7 us, 64.1 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  4.2 si,  0.0 st
+KiB Mem:    507252 total,   498284 used,     8968 free,     4384 buffers
+KiB Swap:   522236 total,    61412 used,   460824 free.    58588 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  45424  33712 R 58.5  9.0 312:49.15 Xorg
+ 1414 mdm       20   0  431492  76388  37980 S 13.2 15.1  68:09.15 mdmwebkit
+ 2716 baumbach  20   0    6788   3040   1584 S  3.9  0.6   0:00.12 bash
+ 2705 root      20   0    6640   2556   1888 S  3.2  0.5   0:00.15 login
+   25 root      20   0       0      0      0 S  2.6  0.0   0:10.45 kswapd0
+    7 root      20   0       0      0      0 S  1.9  0.0   0:10.97 rcu_sched
+ 1418 root      20   0   29856   1832   1828 S  1.3  0.4   0:15.68 console-kit+
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.26 top
+  426 message+  20   0    4528   1248    880 S  0.6  0.2   0:10.05 dbus-daemon
+  720 root      20   0   53424   2244   1728 S  0.6  0.4   0:14.31 NetworkMana+
+  796 nobody    20   0    5556    868    808 S  0.6  0.2   0:00.14 dnsmasq
+ 1578 root      20   0  385876 338188   1012 S  0.6 66.7   4:28.81 rtvscand
+ 2617 telnetd   20   0    2636   1020    836 S  0.6  0.2   0:01.32 in.telnetd
+ 2704 telnetd   20   0    2636   1016    836 S  0.6  0.2   0:00.08 in.telnetd
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.98 ksoftirqd/0
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.80 watchdog/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.77 kworker/0:2
+top - 18:47:23 up  6:35,  4 users,  load average: 1.59, 1.44, 1.42
+Tasks: 106 total,   3 running, 100 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.2 us, 63.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   494592 used,    12660 free,     4384 buffers
+KiB Swap:   522236 total,    61412 used,   460824 free.    58588 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  41464  33712 R 79.1  8.2 312:51.58 Xorg
+ 1414 mdm       20   0  431492  76388  37980 R 17.9 15.1  68:09.70 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.46 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.29 top
+ 1578 root      20   0  385876 338188   1012 S  0.7 66.7   4:28.83 rtvscand
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.78 kworker/0:2
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:55.98 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.97 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.80 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+top - 18:47:26 up  6:35,  4 users,  load average: 1.62, 1.45, 1.42
+Tasks: 106 total,   2 running, 101 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 36.2 us, 61.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st
+KiB Mem:    507252 total,   496556 used,    10696 free,     4392 buffers
+KiB Swap:   522236 total,    61412 used,   460824 free.    58588 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  43840  33712 R 76.3  8.6 312:53.96 Xorg
+ 1414 mdm       20   0  431492  76388  37980 S 16.7 15.1  68:10.22 mdmwebkit
+  118 root      20   0       0      0      0 S  1.0  0.0   1:24.81 kworker/0:2
+ 1354 kernoops  20   0    6392    700    632 S  1.0  0.1   0:05.78 kerneloops
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.32 top
+ 1013 root      20   0   17376   1172    920 S  0.6  0.2   0:55.33 nmbd
+ 1578 root      20   0  385876 338188   1012 S  0.6 66.7   4:28.85 rtvscand
+ 2617 telnetd   20   0    2636   1020    836 S  0.6  0.2   0:01.34 in.telnetd
+    3 root      20   0       0      0      0 S  0.3  0.0   0:55.99 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.98 rcu_sched
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.47 VBoxService
+ 1418 root      20   0   29856   1832   1828 S  0.3  0.4   0:15.69 console-kit+
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.03 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+top - 18:47:29 up  6:35,  4 users,  load average: 1.57, 1.44, 1.42
+Tasks: 106 total,   2 running, 101 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 34.2 us, 62.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.3 si,  0.0 st
+KiB Mem:    507252 total,   494884 used,    12368 free,     4392 buffers
+KiB Swap:   522236 total,    61412 used,   460824 free.    58588 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  42256  33712 R 75.6  8.3 312:56.30 Xorg
+ 1414 mdm       20   0  431492  76388  37980 S 18.4 15.1  68:10.79 mdmwebkit
+ 1578 root      20   0  385876 338188   1012 S  1.3 66.7   4:28.89 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:01.36 top
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.50 VBoxService
+ 2704 telnetd   20   0    2636   1016    836 S  1.0  0.2   0:00.11 in.telnetd
+    3 root      20   0       0      0      0 S  0.3  0.0   0:56.00 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.82 kworker/0:2
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.34 nmbd
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.04 kworker/u2:0
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.35 in.telnetd
+ 2716 baumbach  20   0    6788   3040   1584 S  0.3  0.6   0:00.13 bash
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.98 rcu_sched
+top - 18:47:32 up  6:35,  4 users,  load average: 1.57, 1.44, 1.42
+Tasks: 106 total,   3 running, 100 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.0 us, 62.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.6 si,  0.0 st
+KiB Mem:    507252 total,   494380 used,    12872 free,     4392 buffers
+KiB Swap:   522236 total,    61412 used,   460824 free.    58588 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  40936  33712 R 78.4  8.1 312:58.72 Xorg
+ 1414 mdm       20   0  431492  76652  37980 R 17.8 15.1  68:11.34 mdmwebkit
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.53 VBoxService
+ 1578 root      20   0  385876 338188   1012 S  1.0 66.7   4:28.92 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.39 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.84 kworker/0:2
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.36 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:56.00 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:10.98 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.80 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kdevtmpfs
+top - 18:47:35 up  6:35,  4 users,  load average: 1.53, 1.43, 1.42
+Tasks: 106 total,   3 running, 100 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 35.6 us, 62.7 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem:    507252 total,   500616 used,     6636 free,     4392 buffers
+KiB Swap:   522236 total,    61412 used,   460824 free.    58588 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  48064  33712 R 76.1  9.5 313:01.10 Xorg
+ 1414 mdm       20   0  431492  76652  37980 S 17.9 15.1  68:11.90 mdmwebkit
+ 1578 root      20   0  385876 338188   1012 S  1.9 66.7   4:28.98 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.6  0.3   0:01.44 top
+ 1405 root      20   0    9600    592    516 S  0.6  0.1   3:06.55 VBoxService
+    3 root      20   0       0      0      0 R  0.3  0.0   0:56.01 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:10.99 rcu_sched
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.81 watchdog/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.85 kworker/0:2
+ 1418 root      20   0   29856   1832   1828 S  0.3  0.4   0:15.70 console-kit+
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.05 kworker/u2:0
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:47:38 up  6:35,  4 users,  load average: 1.53, 1.43, 1.42
+Tasks: 107 total,   2 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 32.4 us, 64.7 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.9 si,  0.0 st
+KiB Mem:    507252 total,   493620 used,    13632 free,     5060 buffers
+KiB Swap:   522236 total,    61756 used,   460480 free.    58552 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  101728  40676  33712 R 72.5  8.0 313:03.34 Xorg
+ 1414 mdm       20   0  431492  76652  37980 S 16.8 15.1  68:12.42 mdmwebkit
+ 2728 root      20   0    8704   2200   1668 S  2.6  0.4   0:00.08 sudo
+   25 root      20   0       0      0      0 S  2.3  0.0   0:10.52 kswapd0
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.58 VBoxService
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.47 top
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.87 kworker/0:2
+ 1578 root      20   0  385876 337844   1012 S  0.6 66.6   4:29.00 rtvscand
+    3 root      20   0       0      0      0 S  0.3  0.0   0:56.02 ksoftirqd/0
+    7 root      20   0       0      0      0 S  0.3  0.0   0:11.00 rcu_sched
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:10.06 dbus-daemon
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.37 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:47:41 up  6:35,  4 users,  load average: 1.57, 1.44, 1.42
+Tasks: 108 total,   2 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 30.9 us, 59.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  9.1 si,  0.0 st
+KiB Mem:    507252 total,   499812 used,     7440 free,     7864 buffers
+KiB Swap:   522236 total,    62832 used,   459404 free.    57780 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  44368  33712 R 64.4  8.7 313:05.32 Xorg
+ 1414 mdm       20   0  431492  76652  37980 S 14.3 15.1  68:12.86 mdmwebkit
+ 2729 root      20   0    4464    676    604 D 10.1  0.1   0:00.31 du
+    7 root      20   0       0      0      0 S  2.6  0.0   0:11.08 rcu_sched
+   25 root      20   0       0      0      0 S  2.6  0.0   0:10.60 kswapd0
+ 2728 root      20   0    8832   2400   1836 S  2.3  0.5   0:00.15 sudo
+ 2704 telnetd   20   0    2636   1016    836 S  1.3  0.2   0:00.15 in.telnetd
+ 1578 root      20   0  385876 336768   1012 S  1.0 66.4   4:29.03 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.50 top
+ 1405 root      20   0    9600    592    516 S  0.7  0.1   3:06.60 VBoxService
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.82 watchdog/0
+  118 root      20   0       0      0      0 S  0.3  0.0   1:24.88 kworker/0:2
+ 
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:56.02 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+top - 18:47:44 up  6:35,  4 users,  load average: 1.60, 1.45, 1.42
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 15.6 us, 65.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 18.5 si,  0.0 st
+KiB Mem:    507252 total,   494896 used,    12356 free,    12084 buffers
+KiB Swap:   522236 total,    71108 used,   451128 free.    55572 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  40936  33712 R 44.7  8.1 313:06.72 Xorg
+ 2729 root      20   0    4568    988    644 R 24.6  0.2   0:01.08 du
+   25 root      20   0       0      0      0 S 10.2  0.0   0:10.92 kswapd0
+ 1414 mdm       20   0  431492  76624  37980 R  8.6 15.1  68:13.13 mdmwebkit
+    7 root      20   0       0      0      0 S  3.2  0.0   0:11.18 rcu_sched
+    3 root      20   0       0      0      0 S  1.9  0.0   0:56.08 ksoftirqd/0
+  118 root      20   0       0      0      0 S  1.3  0.0   1:24.92 kworker/0:2
+ 2324 root      20   0       0      0      0 S  1.3  0.0   0:14.09 kworker/u2:0
+ 2701 baumbach  20   0    5432   1340   1012 R  1.3  0.3   0:01.54 top
+  205 root      20   0       0      0      0 S  0.6  0.0   0:04.02 jbd2/sda1-8
+ 1578 root      20   0  385876 328596   1012 S  0.6 64.8   4:29.05 rtvscand
+ 2674 root       0 -20       0      0      0 S  0.6  0.0   0:00.10 kworker/u3:1
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.35 nmbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.61 VBoxService
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.38 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+top - 18:47:47 up  6:35,  4 users,  load average: 1.60, 1.45, 1.42
+Tasks: 109 total,   3 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 17.6 us, 67.1 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 15.3 si,  0.0 st
+KiB Mem:    507252 total,   495552 used,    11700 free,    16360 buffers
+KiB Swap:   522236 total,    77524 used,   444712 free.    53912 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  46480  33712 R 45.3  9.2 313:08.13 Xorg
+ 2729 root      20   0    4568    988    644 D 26.6  0.2   0:01.91 du
+   25 root      20   0       0      0      0 S  8.3  0.0   0:11.18 kswapd0
+ 1414 mdm       20   0  431492  76028  37980 S  8.3 15.0  68:13.39 mdmwebkit
+    7 root      20   0       0      0      0 R  4.2  0.0   0:11.31 rcu_sched
+  205 root      20   0       0      0      0 S  1.6  0.0   0:04.07 jbd2/sda1-8
+ 1578 root      20   0  385876 323364   1012 S  1.0 63.7   4:29.08 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.57 top
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.10 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.6  0.0   1:24.94 kworker/0:2
+  604 root      20   0   28412   1756   1296 S  0.3  0.3   0:03.57 smbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.62 VBoxService
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.10 kworker/u2:0
+ 2730 root       0 -20       0      0      0 S  0.3  0.0   0:00.01 kworker/u3:2
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+top - 18:47:51 up  6:35,  4 users,  load average: 1.71, 1.48, 1.43
+Tasks: 109 total,   5 running, 101 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 15.6 us, 67.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 16.9 si,  0.0 st
+KiB Mem:    507252 total,   494128 used,    13124 free,    19980 buffers
+KiB Swap:   522236 total,    85092 used,   437144 free.    50912 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  101728  40676  33712 R 45.2  8.0 313:09.53 Xorg
+ 2729 root      20   0    4700    988    644 D 26.2  0.2   0:02.72 du
+   25 root      20   0       0      0      0 R 11.0  0.0   0:11.52 kswapd0
+ 1414 mdm       20   0  431492  75172  37980 R  8.1 14.8  68:13.64 mdmwebkit
+    7 root      20   0       0      0      0 R  3.2  0.0   0:11.41 rcu_sched
+ 2324 root      20   0       0      0      0 S  1.6  0.0   0:14.15 kworker/u2:0
+  118 root      20   0       0      0      0 S  1.3  0.0   1:24.98 kworker/0:2
+ 1578 root      20   0  385876 316692   1012 S  1.3 62.4   4:29.12 rtvscand
+    3 root      20   0       0      0      0 S  1.0  0.0   0:56.13 ksoftirqd/0
+ 2701 baumbach  20   0    5432   1340   1012 R  1.0  0.3   0:01.60 top
+  426 message+  20   0    4528   1248    880 S  0.3  0.2   0:10.07 dbus-daemon
+ 1013 root      20   0   17376   1172    920 S  0.3  0.2   0:55.36 nmbd
+ 1405 root      20   0    9600    592    516 S  0.3  0.1   3:06.63 VBoxService
+ 1418 root      20   0   29856   1832   1828 S  0.3  0.4   0:15.71 console-kit+
+ 2617 telnetd   20   0    2636   1020    836 S  0.3  0.2   0:01.39 in.telnetd
+    1 root      20   0    4464   1536    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+top - 18:47:54 up  6:35,  4 users,  load average: 1.74, 1.49, 1.43
+Tasks: 109 total,   2 running, 104 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 21.9 us, 61.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 16.1 si,  0.0 st
+KiB Mem:    507252 total,   497976 used,     9276 free,    22516 buffers
+KiB Swap:   522236 total,    89688 used,   432548 free.    49148 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42776  33712 R 45.5  8.4 313:10.96 Xorg
+ 2729 root      20   0    4568   1092    644 D 24.2  0.2   0:03.48 du
+ 1414 mdm       20   0  431492  75104  37980 S  9.9 14.8  68:13.95 mdmwebkit
+   25 root      20   0       0      0      0 S  7.6  0.0   0:11.76 kswapd0
+    7 root      20   0       0      0      0 S  4.8  0.0   0:11.56 rcu_sched
+ 1405 root      20   0    9600    592    516 S  1.3  0.1   3:06.67 VBoxService
+ 2324 root      20   0       0      0      0 S  1.3  0.0   0:14.19 kworker/u2:0
+  205 root      20   0       0      0      0 S  1.0  0.0   0:04.10 jbd2/sda1-8
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.15 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.6  0.0   1:25.00 kworker/0:2
+ 1578 root      20   0  385876 312196   1012 S  0.6 61.5   4:29.14 rtvscand
+ 2701 baumbach  20   0    5432   1340   1012 R  0.6  0.3   0:01.62 top
+  720 root      20   0   53424   2244   1728 S  0.3  0.4   0:14.32 NetworkMana+
+ 2730 root       0 -20       0      0      0 S  0.3  0.0   0:00.02 kworker/u3:2
+    1 root      20   0    4464   1528    856 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+top - 18:47:57 up  6:35,  4 users,  load average: 1.74, 1.49, 1.43
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 18.2 us, 64.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 17.6 si,  0.0 st
+KiB Mem:    507252 total,   495656 used,    11596 free,    27288 buffers
+KiB Swap:   522236 total,    96852 used,   425384 free.    45520 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  42232  33696 R 45.6  8.3 313:12.38 Xorg
+ 2729 root      20   0    4724   1100    612 D 28.6  0.2   0:04.37 du
+   25 root      20   0       0      0      0 R 10.9  0.0   0:12.10 kswapd0
+ 1414 mdm       20   0  431492  74696  37936 R  9.0 14.7  68:14.23 mdmwebkit
+    7 root      20   0       0      0      0 S  3.2  0.0   0:11.66 rcu_sched
+ 2701 baumbach  20   0    5432   1308    980 R  1.9  0.3   0:01.68 top
+ 1405 root      20   0    9600    592    516 S  1.0  0.1   3:06.70 VBoxService
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.17 ksoftirqd/0
+  118 root      20   0       0      0      0 S  0.6  0.0   1:25.02 kworker/0:2
+  205 root      20   0       0      0      0 S  0.6  0.0   0:04.12 jbd2/sda1-8
+ 2324 root      20   0       0      0      0 S  0.6  0.0   0:14.21 kworker/u2:0
+ 1013 root      20   0   17376   1092    840 S  0.3  0.2   0:55.37 nmbd
+ 1578 root      20   0  385876 305372    988 S  0.3 60.2   4:29.15 rtvscand
+ 2617 telnetd   20   0    2636    972    788 S  0.3  0.2   0:01.40 in.telnetd
+    1 root      20   0    4464   1468    796 S  0.0  0.3   0:05.87 init
+ 
+top - 18:48:00 up  6:36,  4 users,  load average: 1.84, 1.51, 1.44
+Tasks: 109 total,   3 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 12.5 us, 67.7 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 19.8 si,  0.0 st
+KiB Mem:    507252 total,   498036 used,     9216 free,    31512 buffers
+KiB Swap:   522236 total,   101892 used,   420344 free.    44004 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43160  33568 R 39.8  8.5 313:13.69 Xorg
+ 2729 root      20   0    4468    888    540 D 31.0  0.2   0:05.39 du
+   25 root      20   0       0      0      0 S  8.5  0.0   0:12.38 kswapd0
+ 1414 mdm       20   0  431492  74132  37764 S  6.1 14.6  68:14.43 mdmwebkit
+    7 root      20   0       0      0      0 R  4.0  0.0   0:11.79 rcu_sched
+ 2324 root      20   0       0      0      0 S  2.1  0.0   0:14.28 kworker/u2:0
+    3 root      20   0       0      0      0 S  1.5  0.0   0:56.22 ksoftirqd/0
+ 2701 baumbach  20   0    5432   1132    804 R  1.2  0.2   0:01.72 top
+  118 root      20   0       0      0      0 S  0.9  0.0   1:25.05 kworker/0:2
+  426 message+  20   0    4528   1036    668 S  0.3  0.2   0:10.08 dbus-daemon
+ 1405 root      20   0    9600    508    432 S  0.3  0.1   3:06.71 VBoxService
+ 1578 root      20   0  385876 300720    800 S  0.3 59.3   4:29.16 rtvscand
+ 2617 telnetd   20   0    2636    820    636 S  0.3  0.2   0:01.41 in.telnetd
+ 2726 root      20   0       0      0      0 S  0.3  0.0   0:00.01 kworker/u2:2
+    1 root      20   0    4464   1316    644 S  0.0  0.3   0:05.87 init
+ 
+top - 18:48:03 up  6:36,  4 users,  load average: 1.93, 1.54, 1.45
+Tasks: 109 total,   3 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 13.5 us, 65.6 sy,  0.0 ni,  0.0 id,  0.6 wa,  0.0 hi, 20.3 si,  0.0 st
+KiB Mem:    507252 total,   497416 used,     9836 free,    32236 buffers
+KiB Swap:   522236 total,   106512 used,   415724 free.    43132 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43660  33540 R 42.5  8.6 313:15.02 Xorg
+ 2729 root      20   0    4468    872    524 R 28.1  0.2   0:06.27 du
+   25 root      20   0       0      0      0 S  9.0  0.0   0:12.66 kswapd0
+ 1414 mdm       20   0  431492  73832  37700 S  8.0 14.6  68:14.68 mdmwebkit
+    7 root      20   0       0      0      0 S  3.5  0.0   0:11.90 rcu_sched
+ 2324 root      20   0       0      0      0 S  1.9  0.0   0:14.34 kworker/u2:0
+ 2701 baumbach  20   0    5432   1108    780 R  1.3  0.2   0:01.76 top
+  118 root      20   0       0      0      0 S  1.0  0.0   1:25.08 kworker/0:2
+  205 root      20   0       0      0      0 S  1.0  0.0   0:04.15 jbd2/sda1-8
+ 1578 root      20   0  385876 296200    568 S  1.0 58.4   4:29.19 rtvscand
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.24 ksoftirqd/0
+ 1405 root      20   0    9600    496    420 S  0.6  0.1   3:06.73 VBoxService
+ 1418 root      20   0   29856   1300   1296 S  0.3  0.3   0:15.72 console-kit+
+ 2229 root       0 -20       0      0      0 S  0.3  0.0   0:00.14 kworker/u3:0
+ 2617 telnetd   20   0    2636    764    580 S  0.3  0.2   0:01.42 in.telnetd
+ 2730 root       0 -20       0      0      0 S  0.3  0.0   0:00.03 kworker/u3:2
+    1 root      20   0    4464   1300    628 S  0.0  0.3   0:05.87 init
+top - 18:48:06 up  6:36,  4 users,  load average: 1.93, 1.54, 1.45
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 16.4 us, 68.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 14.8 si,  0.0 st
+KiB Mem:    507252 total,   498816 used,     8436 free,    34100 buffers
+KiB Swap:   522236 total,   111256 used,   410980 free.    42004 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  42600  33536 R 42.5  8.4 313:16.37 Xorg
+ 2729 root      20   0    4468    784    436 R 32.1  0.2   0:07.29 du
+   25 root      20   0       0      0      0 S  8.2  0.0   0:12.92 kswapd0
+ 1414 mdm       20   0  431492  73812  37684 S  6.3 14.6  68:14.88 mdmwebkit
+    7 root      20   0       0      0      0 R  3.8  0.0   0:12.02 rcu_sched
+  118 root      20   0       0      0      0 S  1.9  0.0   1:25.14 kworker/0:2
+ 2701 baumbach  20   0    5432    964    636 R  1.3  0.2   0:01.80 top
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.26 ksoftirqd/0
+   10 root      rt   0       0      0      0 S  0.6  0.0   0:10.84 watchdog/0
+ 1578 root      20   0  385876 291428    532 S  0.6 57.5   4:29.21 rtvscand
+  426 message+  20   0    4528   1000    632 S  0.3  0.2   0:10.09 dbus-daemon
+ 1013 root      20   0   17376    824    572 S  0.3  0.2   0:55.38 nmbd
+ 1405 root      20   0    9600    496    420 S  0.3  0.1   3:06.74 VBoxService
+ 1418 root      20   0   29856   1276   1272 S  0.3  0.3   0:15.73 console-kit+
+ 2617 telnetd   20   0    2636    644    460 S  0.3  0.1   0:01.43 in.telnetd
+    1 root      20   0    4464   1288    616 S  0.0  0.3   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+top - 18:48:10 up  6:36,  4 users,  load average: 2.02, 1.56, 1.46
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 16.1 us, 69.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 14.1 si,  0.0 st
+KiB Mem:    507252 total,   502148 used,     5104 free,    32596 buffers
+KiB Swap:   522236 total,   113984 used,   408252 free.    40556 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  47304  33488 R 45.5  9.3 313:17.79 Xorg
+ 2729 root      20   0    4536    788    372 R 27.5  0.2   0:08.15 du
+ 1414 mdm       20   0  431492  73736  37628 S  8.3 14.5  68:15.14 mdmwebkit
+   25 root      20   0       0      0      0 R  8.0  0.0   0:13.17 kswapd0
+    7 root      20   0       0      0      0 S  2.9  0.0   0:12.11 rcu_sched
+  118 root      20   0       0      0      0 S  1.3  0.0   1:25.18 kworker/0:2
+  205 root      20   0       0      0      0 S  1.3  0.0   0:04.19 jbd2/sda1-8
+ 2324 root      20   0       0      0      0 S  1.3  0.0   0:14.38 kworker/u2:0
+ 2701 baumbach  20   0    5432    872    544 R  1.3  0.2   0:01.84 top
+    3 root      20   0       0      0      0 S  1.0  0.0   0:56.29 ksoftirqd/0
+ 1578 root      20   0  385876 288832    484 S  1.0 56.9   4:29.24 rtvscand
+ 1405 root      20   0    9600    448    372 S  0.6  0.1   3:06.76 VBoxService
+  426 message+  20   0    4528    952    584 S  0.3  0.2   0:10.10 dbus-daemon
+  720 root      20   0   53424   1456    940 S  0.3  0.3   0:14.33 NetworkMana+
+ 1013 root      20   0   17376    776    524 S  0.3  0.2   0:55.39 nmbd
+ 2617 telnetd   20   0    2636    572    388 S  0.3  0.1   0:01.44 in.telnetd
+ 2730 root       0 -20       0      0      0 S  0.3  0.0   0:00.04 kworker/u3:2
+top - 18:48:13 up  6:36,  4 users,  load average: 2.02, 1.56, 1.46
+Tasks: 109 total,   5 running, 101 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 16.1 us, 68.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 15.5 si,  0.0 st
+KiB Mem:    507252 total,   497184 used,    10068 free,    31504 buffers
+KiB Swap:   522236 total,   119540 used,   402696 free.    40360 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  41760  33488 R 39.4  8.2 313:19.04 Xorg
+ 2729 root      20   0    4536    788    372 R 29.3  0.2   0:09.08 du
+   25 root      20   0       0      0      0 S 10.1  0.0   0:13.49 kswapd0
+ 1414 mdm       20   0  431492  73692  37628 R  8.2 14.5  68:15.40 mdmwebkit
+    7 root      20   0       0      0      0 S  3.8  0.0   0:12.23 rcu_sched
+  118 root      20   0       0      0      0 S  2.5  0.0   1:25.26 kworker/0:2
+ 2324 root      20   0       0      0      0 R  2.5  0.0   0:14.46 kworker/u2:0
+ 2701 baumbach  20   0    5432    872    544 R  1.3  0.2   0:01.88 top
+    3 root      20   0       0      0      0 S  0.9  0.0   0:56.32 ksoftirqd/0
+  205 root      20   0       0      0      0 S  0.9  0.0   0:04.22 jbd2/sda1-8
+ 1578 root      20   0  385876 283184    484 S  0.6 55.8   4:29.26 rtvscand
+ 1013 root      20   0   17376    768    516 S  0.3  0.2   0:55.40 nmbd
+    1 root      20   0    4464   1232    560 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:48:16 up  6:36,  4 users,  load average: 2.01, 1.57, 1.46
+Tasks: 109 total,   2 running, 104 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 17.2 us, 68.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 13.9 si,  0.0 st
+KiB Mem:    507252 total,   496792 used,    10460 free,    31892 buffers
+KiB Swap:   522236 total,   123440 used,   398796 free.    40168 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  41496  33488 R 46.1  8.2 313:20.51 Xorg
+ 2729 root      20   0    4536    788    372 D 27.6  0.2   0:09.96 du
+ 1414 mdm       20   0  431492  73692  37628 S  8.5 14.5  68:15.67 mdmwebkit
+   25 root      20   0       0      0      0 S  7.2  0.0   0:13.72 kswapd0
+    7 root      20   0       0      0      0 S  3.8  0.0   0:12.35 rcu_sched
+  118 root      20   0       0      0      0 S  1.9  0.0   1:25.32 kworker/0:2
+    3 root      20   0       0      0      0 S  1.3  0.0   0:56.36 ksoftirqd/0
+ 1578 root      20   0  385876 279284    484 S  1.3 55.1   4:29.30 rtvscand
+ 2701 baumbach  20   0    5432    872    544 R  1.3  0.2   0:01.92 top
+ 1405 root      20   0    9600    448    372 S  0.3  0.1   3:06.77 VBoxService
+ 1418 root      20   0   29856   1060   1056 S  0.3  0.2   0:15.74 console-kit+
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.47 kworker/u2:0
+ 2617 telnetd   20   0    2636    572    388 S  0.3  0.1   0:01.45 in.telnetd
+    1 root      20   0    4464   1232    560 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+top - 18:48:19 up  6:36,  4 users,  load average: 2.09, 1.59, 1.47
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 17.4 us, 72.1 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 10.5 si,  0.0 st
+KiB Mem:    507252 total,   497960 used,     9292 free,    29556 buffers
+KiB Swap:   522236 total,   128316 used,   393920 free.    41212 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  43072  33480 R 39.0  8.5 313:21.73 Xorg
+ 2729 root      20   0    4536    776    360 R 31.0  0.2   0:10.93 du
+   25 root      20   0       0      0      0 S  9.3  0.0   0:14.01 kswapd0
+ 1414 mdm       20   0  431492  73232  37320 S  7.0 14.4  68:15.89 mdmwebkit
+    7 root      20   0       0      0      0 R  2.2  0.0   0:12.42 rcu_sched
+ 1578 root      20   0  385876 274596    496 S  2.2 54.1   4:29.37 rtvscand
+    3 root      20   0       0      0      0 S  1.3  0.0   0:56.40 ksoftirqd/0
+  118 root      20   0       0      0      0 S  1.3  0.0   1:25.36 kworker/0:2
+  205 root      20   0       0      0      0 S  1.3  0.0   0:04.26 jbd2/sda1-8
+ 2701 baumbach  20   0    5432    844    516 R  1.0  0.2   0:01.95 top
+ 1013 root      20   0   17376    768    516 S  0.6  0.2   0:55.42 nmbd
+ 1519 root      20   0    3136    312    204 S  0.6  0.1   0:07.84 symcfgd
+ 1405 root      20   0    9600    448    372 S  0.3  0.1   3:06.78 VBoxService
+ 2617 telnetd   20   0    2636    560    376 S  0.3  0.1   0:01.46 in.telnetd
+ 2730 root       0 -20       0      0      0 S  0.3  0.0   0:00.05 kworker/u3:2
+    1 root      20   0    4464   1208    536 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+top - 18:48:22 up  6:36,  4 users,  load average: 2.09, 1.59, 1.47
+Tasks: 109 total,   3 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 14.2 us, 74.4 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 11.3 si,  0.0 st
+KiB Mem:    507252 total,   494860 used,    12392 free,    28468 buffers
+KiB Swap:   522236 total,   132304 used,   389932 free.    40592 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  101728  40436  33480 R 44.0  8.0 313:23.09 Xorg
+ 2729 root      20   0    4668    776    360 R 31.7  0.2   0:11.91 du
+ 1414 mdm       20   0  431492  72524  36760 S  7.8 14.3  68:16.13 mdmwebkit
+   25 root      20   0       0      0      0 S  7.4  0.0   0:14.24 kswapd0
+  118 root      20   0       0      0      0 S  2.6  0.0   1:25.44 kworker/0:2
+    7 root      20   0       0      0      0 S  2.3  0.0   0:12.49 rcu_sched
+ 2324 root      20   0       0      0      0 S  2.3  0.0   0:14.54 kworker/u2:0
+    3 root      20   0       0      0      0 S  1.0  0.0   0:56.43 ksoftirqd/0
+ 2701 baumbach  20   0    5432    836    508 R  1.0  0.2   0:01.98 top
+ 1578 root      20   0  385876 270752    492 S  0.6 53.4   4:29.39 rtvscand
+    1 root      20   0    4464   1204    532 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:10.84 watchdog/0
+   11 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 khelper
+top - 18:48:25 up  6:36,  4 users,  load average: 2.17, 1.62, 1.48
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 15.3 us, 74.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 10.7 si,  0.0 st
+KiB Mem:    507252 total,   498748 used,     8504 free,    25488 buffers
+KiB Swap:   522236 total,   137460 used,   384776 free.    39432 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  46240  33480 R 37.1  9.1 313:24.25 Xorg
+ 2729 root      20   0    4536    776    360 R 33.9  0.2   0:12.97 du
+   25 root      20   0       0      0      0 S  9.9  0.0   0:14.55 kswapd0
+ 1414 mdm       20   0  431492  72752  36808 S  8.0 14.3  68:16.38 mdmwebkit
+    7 root      20   0       0      0      0 S  2.2  0.0   0:12.56 rcu_sched
+  118 root      20   0       0      0      0 S  1.9  0.0   1:25.50 kworker/0:2
+ 2701 baumbach  20   0    5432    836    508 R  1.3  0.2   0:02.02 top
+    3 root      20   0       0      0      0 R  1.0  0.0   0:56.46 ksoftirqd/0
+  205 root      20   0       0      0      0 S  1.0  0.0   0:04.29 jbd2/sda1-8
+ 2324 root      20   0       0      0      0 S  1.0  0.0   0:14.57 kworker/u2:0
+ 1354 kernoops  20   0    6392    564    496 S  0.6  0.1   0:05.80 kerneloops
+ 1405 root      20   0    9600    448    372 S  0.6  0.1   3:06.80 VBoxService
+ 1578 root      20   0  385876 265604    492 S  0.6 52.4   4:29.41 rtvscand
+ 2617 telnetd   20   0    2636    548    364 S  0.3  0.1   0:01.47 in.telnetd
+ 2730 root       0 -20       0      0      0 S  0.3  0.0   0:00.06 kworker/u3:2
+    1 root      20   0    4464   1204    532 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+top - 18:48:28 up  6:36,  4 users,  load average: 2.47, 1.69, 1.50
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 17.1 us, 66.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 16.1 si,  0.0 st
+KiB Mem:    507252 total,   493804 used,    13448 free,    26932 buffers
+KiB Swap:   522236 total,   141728 used,   380508 free.    39372 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  101728  40432  33476 R 47.1  8.0 313:25.73 Xorg
+ 2729 root      20   0    4536    772    356 R 28.3  0.2   0:13.86 du
+ 1414 mdm       20   0  431492  72712  36768 S  8.3 14.3  68:16.64 mdmwebkit
+   25 root      20   0       0      0      0 R  8.0  0.0   0:14.80 kswapd0
+    7 root      20   0       0      0      0 S  3.2  0.0   0:12.66 rcu_sched
+  118 root      20   0       0      0      0 S  1.3  0.0   1:25.54 kworker/0:2
+ 2701 baumbach  20   0    5432    836    508 R  1.3  0.2   0:02.06 top
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.48 ksoftirqd/0
+ 1405 root      20   0    9600    448    372 S  0.6  0.1   3:06.82 VBoxService
+  205 root      20   0       0      0      0 S  0.3  0.0   0:04.30 jbd2/sda1-8
+  426 message+  20   0    4528    944    576 S  0.3  0.2   0:10.11 dbus-daemon
+ 1013 root      20   0   17376    764    512 S  0.3  0.2   0:55.43 nmbd
+ 1578 root      20   0  385876 261464    492 S  0.3 51.5   4:29.42 rtvscand
+ 2617 telnetd   20   0    2636    540    356 S  0.3  0.1   0:01.48 in.telnetd
+    1 root      20   0    4464   1200    528 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+top - 18:48:32 up  6:36,  4 users,  load average: 2.47, 1.69, 1.50
+Tasks: 109 total,   2 running, 104 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 19.0 us, 68.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 12.5 si,  0.0 st
+KiB Mem:    507252 total,   499012 used,     8240 free,    27632 buffers
+KiB Swap:   522236 total,   146308 used,   375928 free.    39332 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  44916  33476 R 43.0  8.9 313:27.09 Xorg
+ 2729 root      20   0    4536    772    356 D 28.1  0.2   0:14.75 du
+ 1414 mdm       20   0  431492  72704  36760 S  9.2 14.3  68:16.93 mdmwebkit
+   25 root      20   0       0      0      0 S  8.9  0.0   0:15.08 kswapd0
+    7 root      20   0       0      0      0 S  3.8  0.0   0:12.78 rcu_sched
+  118 root      20   0       0      0      0 S  2.5  0.0   1:25.62 kworker/0:2
+ 2324 root      20   0       0      0      0 S  1.3  0.0   0:14.61 kworker/u2:0
+ 2701 baumbach  20   0    5432    836    508 R  1.3  0.2   0:02.10 top
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.50 ksoftirqd/0
+ 1405 root      20   0    9600    448    372 S  0.6  0.1   3:06.84 VBoxService
+ 1578 root      20   0  385876 256756    492 S  0.6 50.6   4:29.44 rtvscand
+  720 root      20   0   53424   1388    872 S  0.3  0.3   0:14.34 NetworkMana+
+    1 root      20   0    4464   1200    528 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+top - 18:48:35 up  6:36,  4 users,  load average: 2.68, 1.74, 1.52
+Tasks: 109 total,   3 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 17.3 us, 70.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 11.8 si,  0.0 st
+KiB Mem:    507252 total,   499308 used,     7944 free,    27132 buffers
+KiB Swap:   522236 total,   151092 used,   371144 free.    39952 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  44388  33476 R 43.4  8.8 313:28.46 Xorg
+ 2729 root      20   0    4536    772    356 R 28.8  0.2   0:15.66 du
+   25 root      20   0       0      0      0 S  7.9  0.0   0:15.33 kswapd0
+ 1414 mdm       20   0  431492  72704  36760 S  7.9 14.3  68:17.18 mdmwebkit
+    7 root      20   0       0      0      0 S  3.2  0.0   0:12.88 rcu_sched
+  118 root      20   0       0      0      0 S  1.9  0.0   1:25.68 kworker/0:2
+ 2701 baumbach  20   0    5432    836    508 R  1.3  0.2   0:02.14 top
+    3 root      20   0       0      0      0 S  1.0  0.0   0:56.53 ksoftirqd/0
+  205 root      20   0       0      0      0 S  1.0  0.0   0:04.33 jbd2/sda1-8
+ 1578 root      20   0  385876 251972    492 S  1.0 49.7   4:29.47 rtvscand
+  656 root      20   0   28412    840    404 S  0.6  0.2   0:01.27 smbd
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.85 watchdog/0
+ 1013 root      20   0   17376    756    504 S  0.3  0.1   0:55.44 nmbd
+ 1405 root      20   0    9600    448    372 S  0.3  0.1   3:06.85 VBoxService
+ 1418 root      20   0   29856    984    980 S  0.3  0.2   0:15.75 console-kit+
+ 2617 telnetd   20   0    2636    540    356 S  0.3  0.1   0:01.49 in.telnetd
+    1 root      20   0    4464   1200    528 S  0.0  0.2   0:05.87 init
+top - 18:48:38 up  6:36,  4 users,  load average: 2.68, 1.74, 1.52
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 18.4 us, 69.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 11.7 si,  0.0 st
+KiB Mem:    507252 total,   495916 used,    11336 free,    27336 buffers
+KiB Swap:   522236 total,   154508 used,   367728 free.    39932 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  41212  33468 R 41.5  8.1 313:29.76 Xorg
+ 2729 root      20   0    4536    768    352 R 31.3  0.2   0:16.64 du
+ 1414 mdm       20   0  431492  72684  36740 R  9.9 14.3  68:17.49 mdmwebkit
+   25 root      20   0       0      0      0 S  8.3  0.0   0:15.59 kswapd0
+    7 root      20   0       0      0      0 S  3.2  0.0   0:12.98 rcu_sched
+ 2324 root      20   0       0      0      0 S  1.6  0.0   0:14.66 kworker/u2:0
+  118 root      20   0       0      0      0 S  1.3  0.0   1:25.72 kworker/0:2
+ 2701 baumbach  20   0    5432    828    500 R  1.3  0.2   0:02.18 top
+    3 root      20   0       0      0      0 S  0.6  0.0   0:56.55 ksoftirqd/0
+ 1013 root      20   0   17376    752    500 S  0.3  0.1   0:55.45 nmbd
+ 1405 root      20   0    9600    440    364 S  0.3  0.1   3:06.86 VBoxService
+ 1578 root      20   0  385876 248536    472 S  0.3 49.0   4:29.48 rtvscand
+ 2617 telnetd   20   0    2636    532    348 S  0.3  0.1   0:01.50 in.telnetd
+    1 root      20   0    4464   1192    520 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+top - 18:48:41 up  6:36,  4 users,  load average: 2.78, 1.78, 1.53
+Tasks: 109 total,   4 running, 102 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 17.1 us, 62.2 sy,  0.0 ni,  0.0 id,  4.9 wa,  0.0 hi, 15.8 si,  0.0 st
+KiB Mem:    507252 total,   499724 used,     7528 free,    29196 buffers
+KiB Swap:   522236 total,   157864 used,   364372 free.    40380 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  107636  46220  33460 R 43.4  9.1 313:31.13 Xorg
+ 2729 root      20   0    4800    764    348 R 25.3  0.2   0:17.44 du
+ 1414 mdm       20   0  431616  72748  36756 S  8.6 14.3  68:17.76 mdmwebkit
+   25 root      20   0       0      0      0 S  7.0  0.0   0:15.81 kswapd0
+    7 root      20   0       0      0      0 S  3.5  0.0   0:13.09 rcu_sched
+ 2324 root      20   0       0      0      0 S  1.3  0.0   0:14.70 kworker/u2:0
+ 2701 baumbach  20   0    5432    816    488 R  1.3  0.2   0:02.22 top
+    3 root      20   0       0      0      0 R  1.0  0.0   0:56.58 ksoftirqd/0
+  118 root      20   0       0      0      0 S  1.0  0.0   1:25.75 kworker/0:2
+ 1405 root      20   0    9600    436    360 S  1.0  0.1   3:06.89 VBoxService
+ 1578 root      20   0  385876 245172    460 S  0.6 48.3   4:29.50 rtvscand
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.86 watchdog/0
+  205 root      20   0       0      0      0 S  0.3  0.0   0:04.34 jbd2/sda1-8
+ 1013 root      20   0   17376    752    500 S  0.3  0.1   0:55.46 nmbd
+    1 root      20   0    4464   1180    508 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+top - 18:48:44 up  6:36,  4 users,  load average: 2.88, 1.82, 1.55
+Tasks: 109 total,   2 running, 104 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 16.6 us, 68.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 14.9 si,  0.0 st
+KiB Mem:    507252 total,   498460 used,     8792 free,    31456 buffers
+KiB Swap:   522236 total,   161852 used,   360384 free.    40028 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  42788  33460 R 43.0  8.4 313:32.48 Xorg
+ 2729 root      20   0    4800    764    348 D 29.3  0.2   0:18.36 du
+ 1414 mdm       20   0  431616  72748  36756 S  8.0 14.3  68:18.01 mdmwebkit
+   25 root      20   0       0      0      0 S  6.7  0.0   0:16.02 kswapd0
+    7 root      20   0       0      0      0 S  4.5  0.0   0:13.23 rcu_sched
+  118 root      20   0       0      0      0 S  1.3  0.0   1:25.79 kworker/0:2
+ 2324 root      20   0       0      0      0 S  1.3  0.0   0:14.74 kworker/u2:0
+ 2701 baumbach  20   0    5432    816    488 R  1.3  0.2   0:02.26 top
+    3 root      20   0       0      0      0 S  1.0  0.0   0:56.61 ksoftirqd/0
+  205 root      20   0       0      0      0 S  1.0  0.0   0:04.37 jbd2/sda1-8
+ 1405 root      20   0    9600    436    360 S  1.0  0.1   3:06.92 VBoxService
+ 2229 root       0 -20       0      0      0 S  0.6  0.0   0:00.16 kworker/u3:0
+ 1418 root      20   0   29856    968    964 S  0.3  0.2   0:15.76 console-kit+
+ 1578 root      20   0  385876 241180    456 S  0.3 47.5   4:29.51 rtvscand
+ 2617 telnetd   20   0    2636    520    336 S  0.3  0.1   0:01.51 in.telnetd
+ 2726 root      20   0       0      0      0 S  0.3  0.0   0:00.02 kworker/u2:2
+    1 root      20   0    4464   1180    508 S  0.0  0.2   0:05.87 init
+top - 18:48:47 up  6:36,  4 users,  load average: 2.88, 1.82, 1.55
+Tasks: 109 total,   3 running, 103 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 18.1 us, 68.3 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 13.6 si,  0.0 st
+KiB Mem:    507252 total,   495632 used,    11620 free,    29320 buffers
+KiB Swap:   522236 total,   165836 used,   356400 free.    44832 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  40940  33460 R 43.9  8.1 313:33.86 Xorg
+ 2729 root      20   0    4536    764    348 R 24.8  0.2   0:19.14 du
+ 1414 mdm       20   0  431616  72748  36756 S  8.6 14.3  68:18.28 mdmwebkit
+   25 root      20   0       0      0      0 S  8.0  0.0   0:16.27 kswapd0
+    7 root      20   0       0      0      0 S  5.4  0.0   0:13.40 rcu_sched
+    3 root      20   0       0      0      0 S  1.3  0.0   0:56.65 ksoftirqd/0
+ 2701 baumbach  20   0    5432    816    488 R  1.3  0.2   0:02.30 top
+  118 root      20   0       0      0      0 S  1.0  0.0   1:25.82 kworker/0:2
+  604 root      20   0   28412   1108    656 S  0.6  0.2   0:03.59 smbd
+ 1578 root      20   0  385876 237120    380 S  0.6 46.7   4:29.53 rtvscand
+   10 root      rt   0       0      0      0 S  0.3  0.0   0:10.87 watchdog/0
+ 1013 root      20   0   17376    752    500 S  0.3  0.1   0:55.47 nmbd
+ 1405 root      20   0    9600    436    360 S  0.3  0.1   3:06.93 VBoxService
+ 2324 root      20   0       0      0      0 S  0.3  0.0   0:14.75 kworker/u2:0
+ 2617 telnetd   20   0    2636    520    336 S  0.3  0.1   0:01.52 in.telnetd
+    1 root      20   0    4464   1180    508 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+top - 18:48:50 up  6:36,  4 users,  load average: 2.89, 1.84, 1.56
+Tasks: 109 total,   6 running, 100 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 18.7 us, 73.2 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  8.1 si,  0.0 st
+KiB Mem:    507252 total,   500020 used,     7232 free,    26164 buffers
+KiB Swap:   522236 total,   169112 used,   353124 free.    44400 cached Mem
+ 
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      GûG
+ 1316 root      20   0  109832  47540  33460 R 37.2  9.4 313:35.02 Xorg
+ 2729 root      20   0    4536    764    348 R 32.7  0.2   0:20.16 du
+   25 root      20   0       0      0      0 R 11.9  0.0   0:16.64 kswapd0
+ 1414 mdm       20   0  431616  72728  36736 S  7.4 14.3  68:18.51 mdmwebkit
+    7 root      20   0       0      0      0 R  4.5  0.0   0:13.54 rcu_sched
+    3 root      20   0       0      0      0 R  1.3  0.0   0:56.69 ksoftirqd/0
+  118 root      20   0       0      0      0 S  1.3  0.0   1:25.86 kworker/0:2
+ 2701 baumbach  20   0    5432    812    484 R  1.3  0.2   0:02.34 top
+  205 root      20   0       0      0      0 S  0.6  0.0   0:04.39 jbd2/sda1-8
+ 1405 root      20   0    9600    436    360 S  0.6  0.1   3:06.95 VBoxService
+ 1578 root      20   0  385876 233844    380 S  0.6 46.1   4:29.55 rtvscand
+  720 root      20   0   53424   1368    852 S  0.3  0.3   0:14.35 NetworkMana+
+ 2229 root       0 -20       0      0      0 S  0.3  0.0   0:00.17 kworker/u3:0
+ 2617 telnetd   20   0    2636    520    336 S  0.3  0.1   0:01.53 in.telnetd
+    1 root      20   0    4464   1180    508 S  0.0  0.2   0:05.87 init
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+ 

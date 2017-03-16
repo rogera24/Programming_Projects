@@ -1,0 +1,22 @@
+2a) In this question the shell firt executes the pwd command, then returns it to the echo command that will echo all the string + pwd.
+
+2b) Bash runs the date command then returns it as a string then, assigns the dates string to the var NOW
+
+2c) Date is run and it returns the date, which then all letters are replaced with their capitalized forms. Then it is stored within NOW.
+
+2d) Hello *.c is run and its output is then stored within vi to be edited.
+
+3a) z*
+3b) *[z]*
+3c) ?z*
+3d) [A-Z]*
+3e) *[0-9].*
+
+4a) if [ prog1 ]; then `./prog1`; else echo Failure; fi;
+4b) if [ prog1 ]; then `./prog1`; echo Success; fi;
+4c) if [ prog1 ]; then `./prog1`; echo Success; else echo Failure; fi;
+4d) if [ prog1 ]; then `./prog1`; else echo Failure 1; fi; if [ prog2 ]; then `./prog2`; else echo Failure 2; fi;
+
+5a) alias q=exit
+5b) alias big=`ls -S`
+5c) alias procs =`ps -ae | wc`

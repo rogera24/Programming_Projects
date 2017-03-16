@@ -1,0 +1,6 @@
+# 7) It created another shell.
+
+# 8) Cat did not stop.
+
+# 10)	a. 1003 total, 2 running, 97 sleeping., 3 stopped, 0 zombie
+	b. It seems to be using 25 to 45% CPU.

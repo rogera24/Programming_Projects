@@ -1,0 +1,99 @@
+baumbach@mintmath ~ $ edho $HOME
+No command 'edho' found, did you mean:
+ Command 'echo' from package 'coreutils' (main)
+edho: command not found
+baumbach@mintmath ~ $ echo $HOME
+/home/baumbach
+baumbach@mintmath ~ $ echo $home
+ 
+baumbach@mintmath ~ $ echo $GARBAGE
+ 
+baumbach@mintmath ~ $ STUFF = whatwhat
+STUFF: command not found
+baumbach@mintmath ~ $ echo $STUFF
+ 
+baumbach@mintmath ~ $ $STUFF = whatwhat
+=: command not found
+baumbach@mintmath ~ $ STUFF=whatwhat
+baumbach@mintmath ~ $ echo STUFF
+STUFF
+baumbach@mintmath ~ $ echo $STUFF
+whatwhat
+baumbach@mintmath ~ $ bash
+baumbach@mintmath ~ $ echo $STUFF
+ 
+baumbach@mintmath ~ $ exit
+exit
+baumbach@mintmath ~ $ export STUFF
+baumbach@mintmath ~ $ bash
+baumbach@mintmath ~ $ echo $STUFF
+whatwhat
+Linux Mint 17 Qianamintmath login: baumbach
+Password:
+Last login: Sun Aug 31 16:25:37 EDT 2014 from roger-desktop.susqu.edu on pts/2
+Welcome to Linux Mint 17 Qiana (GNU/Linux 3.13.0-24-generic i686)
+ 
+Welcome to Linux Mint
+ * Documentation:  http://www.linuxmint.com
+E^Hech
+Hello, Youre Awesome and do not forget it! No seriosuly, DONT!
+ 
+obaumbach@mintmath ~ $ echo $STUFF
+ 
+baumbach@mintmath ~ $ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/loc
+al/games
+baumbach@mintmath ~ $ path
+No command 'path' found, did you mean:
+ Command 'pat' from package 'dist' (universe)
+ Command 'patch' from package 'patch' (main)
+ Command 'xpath' from package 'libxml-xpath-perl' (universe)
+ Command 'mpath' from package 'libmodule-path-perl' (universe)
+path: command not found
+baumbach@mintmath ~ $ which vi
+/usr/bin/vi
+baumbach@mintmath ~ $ which sexyprogram
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      PR%.
+File to insert [from ./] :                                                      ÍSˆ.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+File Name to Write:                                                             z,
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    z,
+baumbach@mintmath ~ $ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/loc
+al/games
+baumbach@mintmath ~ $ ls
+txt_files
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      ÍSˆ.
+File Name to Write:                                                             Rä.
+File to insert [from ./] :                                                      Rä.
+File Name to Write:                                                             Rä.
+ 
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    Rä.
+baumbach@mintmath ~ $
+baumbach@mintmath ~ $ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/loc
+al/games
+Linux Mint 17 Qianamintmath login: baumbach
+Password:
+Last login: Sun Aug 31 17:00:50 EDT 2014 from roger-desktop.susqu.edu on pts/4
+Welcome to Linux Mint 17 Qiana (GNU/Linux 3.13.0-24-generic i686)
+ 
+Welcome to Linux Mint
+ * Documentation:  http://www.linuxmint.com
+ 
+Hello, Youre Awesome and do not forget it! No seriosuly, DONT!
+ 
+baumbach@mintmath ~ $ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/loc
+al/games:/home/baumbach/txt_files

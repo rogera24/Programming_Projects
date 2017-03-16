@@ -1,0 +1,97 @@
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Roger>echo %HOMEDRIVE%
+C:
+
+C:\Users\Roger>eho %homedrive%
+'eho' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Roger>echo %homedrive%
+C:
+
+C:\Users\Roger>echo %GARBAGE%
+%GARBAGE%
+
+C:\Users\Roger>
+
+
+A) Yes linux is case sensitive
+B) NO DOS is not
+C) Blank Space
+D) The Variable Name
+
+Bash did not inherit
+DOS does in inherit
+
+It did not carry over
+Neither carried over.
+
+A colon seperates materials
+A semicolon seperates materials
+
+There are alot more paths in DOS and they all list the specific hard drive partitions
+
+Command not found
+
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Roger>echo %adsf%
+%adsf%
+
+C:\Users\Roger>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Clien
+t\;C:\Users\Roger\AMD APP SDK\2.9\bin\x86_64;C:\Users\Roger\AMD APP SDK\2.9\bin\
+x86;C:\Program Files (x86)\AMD APP SDK\2.9\bin\x86_64;C:\Program Files (x86)\AMD
+ APP SDK\2.9\bin\x86;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\W
+indows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsP
+owerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\P
+rogram Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Windows Kits\8.1\W
+indows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn
+\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Fi
+les\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel
+\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R)
+ Management Engine Components\IPT
+
+C:\Users\Roger>where notepad.exe
+C:\Windows\System32\notepad.exe
+C:\Windows\notepad.exe
+
+C:\Users\Roger>where notepad
+C:\Windows\System32\notepad.exe
+C:\Windows\notepad.exe
+
+C:\Users\Roger>where awesomedata
+INFO: Could not find files for the given pattern(s).
+
+C:\Users\Roger>
+
+
+
+I dont see my folder because it wasnt run when .profile was run I assume. I was correct, upon reopening it, the directory showed.
+
+I did not show up. Ran a new DOS, it showed up.
+
+
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Roger>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Clien
+t\;C:\Users\Roger\AMD APP SDK\2.9\bin\x86_64;C:\Users\Roger\AMD APP SDK\2.9\bin\
+x86;C:\Program Files (x86)\AMD APP SDK\2.9\bin\x86_64;C:\Program Files (x86)\AMD
+ APP SDK\2.9\bin\x86;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\W
+indows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsP
+owerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\P
+rogram Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Windows Kits\8.1\W
+indows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn
+\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Fi
+les\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel
+\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R)
+ Management Engine Components\IPT;C:\Riot Games
+
+C:\Users\Roger>C:\windows/notepad
+
+C:\Users\Roger>

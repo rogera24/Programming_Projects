@@ -1,0 +1,73 @@
+Linux Mint 17 Qianamintmath login: baumbach
+Password:
+ 
+Login incorrect
+mintmath login: mathisfun
+Password:
+ 
+Login incorrect
+mintmath login: baumbach
+Password:
+ 
+Login incorrect
+mintmath login: baumbach
+Password:
+Last login: Mon Aug 25 15:57:41 EDT 2014 from roger-laptop.susqu.edu on pts/20
+Welcome to Linux Mint 17 Qiana (GNU/Linux 3.13.0-24-generic i686)
+ 
+Welcome to Linux Mint
+ * Documentation:  http://www.linuxmint.com
+baumbach@mintmath ~ $ pwd
+/home/baumbach
+baumbach@mintmath ~ $ passwd
+Changing password for baumbach.
+(current) UNIX password:
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+baumbach@mintmath ~ $ passwd
+Changing password for baumbach.
+(current) UNIX password:
+Enter new UNIX password:
+Retype new UNIX password:
+Sorry, passwords do not match
+passwd: Authentication token manipulation error
+passwd: password unchanged
+baumbach@mintmath ~ $ passwd
+Changing password for baumbach.
+(current) UNIX password:
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      [°ò
+File Name to Write:                                                             ±¶
+baumbach@mintmath ~ $ ls
+hello.txt  mathisfun.txt  stuff
+baumbach@mintmath ~ $ mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+baumbach@mintmath ~ $ mkdir txt_files
+baumbach@mintmath ~ $ cd txt_files
+baumbach@mintmath ~/txt_files $ cd
+baumbach@mintmath ~ $ cp hello.txt txt_files
+baumbach@mintmath ~ $ ls
+hello.txt  mathisfun.txt  stuff  txt_files
+baumbach@mintmath ~ $ cp mathisfun.txt txt_files
+baumbach@mintmath ~ $ cd txt_files
+baumbach@mintmath ~/txt_files $ ls
+hello.txt  mathisfun.txt
+baumbach@mintmath ~/txt_files $ cd
+baumbach@mintmath ~ $ rm hello.txt
+baumbach@mintmath ~ $ rm mathisfun.txt
+baumbach@mintmath ~ $ ls
+stuff  txt_files
+baumbach@mintmath ~ $ rm stuff
+rm: cannot remove â€˜stuffâ€™: Is a directory
+baumbach@mintmath ~ $ rmdir stuff
+baumbach@mintmath ~ $ ls
+txt_files
+baumbach@mintmath ~ $ cd txt_files
+baumbach@mintmath ~/txt_files $ ls
+hello.txt  mathisfun.txt
+baumbach@mintmath ~/txt_files $ cd

@@ -1,3 +1,0 @@
-Test_Map 10 10
-Test_Multiplayer_Map 8 8
-Test_Multiplayer_Map_2 10 10

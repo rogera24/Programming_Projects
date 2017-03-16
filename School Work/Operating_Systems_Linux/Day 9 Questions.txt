@@ -1,0 +1,7 @@
+2) The types of processes are labeled within the program as it prints to the console.
+5) It does not change my shell when the program is done.
+6) Owner/Super can read/write/execute, other users read/execute no write
+7) The program is found in the bin folder. It does run because it knows to look in bin. Well it all depends on which you run. IF run with ./
+	it will load the new compiled copy, the other will run it from bin. The reason is because the file will compile like it did previously,
+	we are left a copy in our home folder that will only run if set to run properly, otherwise the other copy would not be compiled to, so 
+	it will continue to be outdated of any new changes.

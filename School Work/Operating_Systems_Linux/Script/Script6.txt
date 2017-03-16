@@ -1,0 +1,18 @@
+#!/bin/bash
+while true
+do
+	echo "Enter the name of your favorite animal (\"q\" to Quit): "
+	read animal
+	case $animal in
+		cat) echo My sister once had 11 cats.
+			;;
+		dog) echo "Dogs are man's best friend."
+			;;
+		cow|pig|chicken) echo Not good for eating.
+			;;
+		q*) exit
+			;;
+		*) echo "Don't know that one..."
+			;;
+	esac
+done

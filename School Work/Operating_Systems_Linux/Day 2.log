@@ -1,0 +1,27 @@
+baumbach@mintmath ~ $ ls -a
+.   .bash_history  .cache   .mozilla  txt_files
+..  .bash_logout   .config  .profile
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      €:«
+File to insert [from ./] :                                                      ?s
+File Name to Write:                                                             ?s
+baumbach@mintmath ~ $ nano
+  GNU nano 2.2.6                New Buffer                                      C=ì
+File to insert [from ./] :                                                      .p*
+File Name to Write:                                                             .p*
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    .p*
+baumbach@mintmath ~ $ exit
+logout
+ 
+Bye Bye Mr. Amazing!
+ 
+Linux Mint 17 Qianamintmath login: baumbach
+Password:
+Last login: Thu Aug 28 17:45:25 EDT 2014 from roger-desktop.susqu.edu on pts/2
+Welcome to Linux Mint 17 Qiana (GNU/Linux 3.13.0-24-generic i686)
+ 
+Welcome to Linux Mint
+ * Documentation:  http://www.linuxmint.com
+ 
+Hello, Youre Awesome and do not forget it! No seriosuly, DONT!
+ 

@@ -1,0 +1,31 @@
+#games_list{
+border:3px solid rgb(150,150,150);
+border-radius:5px;
+background:rgb(140,140,140);
+border-spacing:4px 3px;
+color:rgb(220,220,220);
+}
+#games_list tr{
+height:50px;
+}
+#games_list td{
+padding:3px;
+border-top:1px solid rgb(160,160,160);
+border-right:1px solid rgb(100,100,100);
+border-bottom:1px solid rgb(100,100,100);
+border-left:1px solid rgb(100,100,100);
+box-shadow:0 0 2px #000;
+background:rgb(120,120,120);
+}
+#games_list .game_logo{
+width:50px;
+background-size:56px 56px;
+}
+#games_list .game_title{
+width:100px;
+}
+#games_list .game_desc{
+}
+#games_list .game_genre{
+width:80px;
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Enter some text (blank line to exit): "
+while read lineoftext
+do
+	echo You Typed in \"$lineoftext\"
+	echo Enter some more text \(CTRL-D to Exit\):
+done
+echo Goodbye.

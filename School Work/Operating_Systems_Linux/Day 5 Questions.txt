@@ -1,0 +1,20 @@
+1a)To ls the dir you need the read permissions. No, if you have read permissions you can see whats in the directory.
+   You just wont be able to open the file.
+
+1b)You need to have the execute permissions.
+
+1c)You need the read permissions to read off the file.
+
+1d)You need write permissions to the directory.
+
+1e)You need write permissions to the directory.
+
+1f)You need write permissions to the directory.
+
+2) Changing permissions of any one of the files changes it on them all so you need read permissions of the file to at least open any of them.
+
+3) 	baumbach@mintmath ~ $ chmod 700 $HOME
+	baumbach@mintmath ~ $ ls -ld
+	drwx------ 6 baumbach baumbach 4096 Sep  4 12:19 .
+
+4) My default is 0002. When I did all those commands and then relogged my umask is back to 0002.

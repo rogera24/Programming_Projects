@@ -1,0 +1,34 @@
+#!/bin/bash
+do
+	echo Please choose which command you wish to perform:\n
+	echo 1) "Reset my password."\n
+	echo 2) "List files in home directory."\n
+	echo 3) "Change my directory."\n
+	echo 4) "Create a text file."\n
+	echo 5) "Quit."\n
+	echo "Please make your selection: "
+	read $choice
+	case $choice in
+		1) echo "Starting change password!"
+			pwd
+			;;
+		2) echo "Listing current directory!"
+			ls
+			;;
+		3) echo "Change to what directory: "
+			read $direct
+			cd $direct
+			;;
+		4) echo "What would you like to name the file: "
+			read $filename
+			echo "What do you want in it: "
+			read $content
+			echo $content > $filename
+			;;
+		5) echo "Goodbye!"
+			quit
+			;;
+		*) echo "Not a valid option!"
+			;;
+	esac
+done

@@ -1,0 +1,16 @@
+^d quits my echo and then logs me out if pressed again
+^i enters a tab
+^j ends the line
+^m made a new line
+^s echoed my last 4 letters and stopped the prompt
+^q does not show up
+^u backspaced
+^v moved forward and printed then deleted and moved back highlighting the ^
+^w does nothin
+^z stopps process
+
+With the use of stty -icrnl it did not stop the input from enter
+
+With the nano editor it doesnt listen to the stty command changes.
+
+VI on the other hand though still listens to the stty changes.

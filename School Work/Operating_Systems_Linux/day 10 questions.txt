@@ -1,0 +1,7 @@
+3b) the file type is  p. I assume for pipe.
+3c) hello did appear in my window that cat it. after it reads hello it reprompts me.
+3d) yes both processes are still listening and lines appear in the first window
+3e) They both end
+3f) it waits for the reciever before writing through the pipe
+3g) Window 2 is still waiting for input
+3h) it writes from one and round robin writes out to the others

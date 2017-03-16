@@ -1,0 +1,39 @@
+<doctype html>
+<html>
+<head>
+<title>Lunacy Arts-Log In</title>
+
+<style>@import url('general.css');@import url('login.css');</style>
+</head>
+<body>
+
+<div id="login_container">
+	<div id="login_prompt">Use your free Lunacy Arts account to manage and track your games</div>
+	<a href="signup.html"><div class="login_button">Sign Up</div></a>
+</div>
+<div id="banner">
+		<div id="logo"></div>
+</div>
+<div id="main">
+	<div id="nav">
+		<a href="contact.html"><div class="nav_button">Contact</div></a>
+		<a href="games.html"><div class="nav_button">Games</div></a>
+		<a href="homepage.html"><div class="nav_button">Home</div></a>
+	</div>
+	<div id="content">
+		<h1>Log In</h1>
+		<form id="sign_up_form" enctype="multipart/form-data" method="post" action="login_processing.php">
+			<label for="log_in_username">Username:</label>
+			<input id="log_in_username" type="text" name="username" required="required" />
+			<label for="log_in_password">Password:</label>
+			<input id="log_in_password" type="password" name="password" required="required" />
+			<input id="log_in_submit" type="submit" name="submit" value="Log In" required="required" />
+		</form>
+	</div>
+
+
+</div>
+<div id="copy">&copy;2012 Lunacy Arts</div>
+
+</body>
+</html>

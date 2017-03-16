@@ -1,0 +1,15 @@
+baumbach@mintmath ~ $ ./Forker3
+I am parent 3926
+I am child 3929, with parent 3926
+I am parent 3929
+I am child 3930, with parent 3929
+I am parent 3930
+I am child 3931, with parent 3930
+I am parent 3931
+I am child 3932, with parent 3931
+baumbach@mintmath ~ $ ./Forker4
+I am parent 4205
+I am child 4214, with parent 4205
+I am child 4215, with parent 4205
+I am child 4216, with parent 4205
+I am child 4217, with parent 4205
