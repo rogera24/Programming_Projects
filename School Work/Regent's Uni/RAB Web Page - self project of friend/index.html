@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lan="eng">
+	<head>
+
+		<title> The Sinking City </title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="scripts/jquery-1.11.2.min.js"> </script>
+
+	</head>
+
+	<body>
+		
+		<div class="header_bar">
+			<div class="drop_down" onmouseover="show_nav()" onmouseout="hide_nav()">
+				<img class="drop_down_img" src="images/drop_down_20x20.png" alt="Drop Down Icon">
+			</div>
+			<h1 class="sub_title">Venice, a city of history and beauty soon gone</h1>
+		</div>
+		
+		<div class="image_box"> 
+			<div class="left_change" id="left_change" onmouseover="shadow_on(1)" onmouseout="shadow_off(1)" onclick="left()">
+				<figure class="left_change_arrow" id="left_arrow">
+					<img class="arrow" id="left_arrow" src="images/left_arrow.png">
+				</figure>
+			</div>
+			<div class="content_window" id="content_window">
+				<figure class="view_port" id="view_port">
+					<img class="picture_port" id="picture_port" src="images/venice/picture1.jpg" alt="A panel containing 10 Pictures of a venetian city">
+				</figure>
+				<div class="pic_desc_panel" id="pic_desc_panel">
+					<h2 class="pic_title" id="pic_title">Venetian Church</h2>
+					<p class="pic_desc" id="pic_desc">The beauty behind Venice lies in the way it utilizes the space in which it if given. Venice, a small chain of islands has very limited space, but yet religion still finds its way to build extravagant large churches.</p>
+				</div>
+			</div>
+			<div class="right_change" id="right_change" onmouseover="shadow_on(2)" onmouseout="shadow_off(2)" onclick="right()">
+				<figure class="right_change_arrow" id="right_arrow">
+					<img class="arrow" id="right_arrow" src="images/right_arrow.png">
+				</figure>
+			</div>
+		</div>
+		
+		<div class="pic_nav" id="pic_nav" onmouseover="show_nav()" onmouseout="hide_nav()">
+			<ul>
+				<p class="list-title">Pictures</li>
+				<li onclick="subject_change(1)">Venetian Church</li>
+				<li onclick="subject_change(2)">The Alleys</li>
+				<li onclick="subject_change(3)">The Road Less Travelled?</li>
+				<li onclick="subject_change(4)">The Gathering Spots</li>
+				<li onclick="subject_change(5)">Big Roads</li>
+				<li onclick="subject_change(6)">The Main Drag</li>
+				<li onclick="subject_change(7)">The Beauty of Bridges</li>
+				<li onclick="subject_change(8)">Boat Corrals</li>
+				<li onclick="subject_change(9)">Private Docks</li>
+				<li onclick="subject_change(10)">Dark History</li>
+			</ul>
+		</div>
+		
+		<footer> 
+		
+			<div class="bottom_bar">
+				<h3 class="bot_title">Roger's Venetian Journey &copy 2015</h3>
+			</div>
+		
+		</footer>
+
+	</body>
+	<script type="text/javascript" src="scripts/mysc.js"></script>
+</html>

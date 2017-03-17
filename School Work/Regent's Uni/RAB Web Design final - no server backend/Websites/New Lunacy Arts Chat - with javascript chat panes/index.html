@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lan="eng">
+	<head>
+
+		<title> Lunacy Arts Chatroom </title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="scripts/jquery-1.11.2.min.js"> </script>
+
+	</head>
+
+	<body>
+		
+		<div class="header_bar">
+			<h1 class="intro" id="hello"> Helllo, $u_name </h1>
+			<h2 class="logout"> <a href="" class="logout">Logout</a> </h2>
+		</div>
+		
+		<div class="Chat_lobby" id="chatroom_body"> 
+			<div class="chat_nav" id="chat_nav" onclick="ZedSet(this)" draggable="true" ondragstart="drag(event, this)">
+				<div class="chat_nav_head" onclick="minimize(this)"> Find a Chat! </div>
+				<div class="chat_nav_body"> </div>
+			</div>
+			<div class="chatroom" id="chatroom1" onclick="ZedSet(this)" draggable="true" ondragstart="drag(event, this)">
+				<div class="chatroom_head" onclick="minimize(this)">Chatroom 1</div>
+				<div class="chatroom_body"> </div>
+			</div>
+		</div>
+			
+		<footer> 
+		
+		</footer>
+
+	</body>
+	<script type="text/javascript" src="scripts/mysc.js"></script>
+</html>

@@ -1,0 +1,5 @@
+Set my Zed Index to 10 x #children of chatroom_body
+New window creation will be +10x +10y from chat_nav
+Add close buttons to each window except for chat_nav
+Create new chat_nav header bar and normal chatroom bar
+Simplify all functions to be added upon start of web page

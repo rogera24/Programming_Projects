@@ -1,0 +1,82 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(71, 41, 80);
+	color: white;
+}
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+.header_bar{
+	z-index: 0;
+	position: fixed;
+	background-color: rgb(37, 37, 37);
+	height: 60px;
+	width: 100%;
+}
+.Chat_Lobby{
+	height: 100%;
+	width: 100%;
+}
+.intro{
+	margin: 13px 0px 0px 15px;
+	background-color: inherit;
+	float:left;
+}
+.logout{
+	margin: 8px 15px 0px 0px;
+	background-color: inherit;
+	float: right;
+}
+.chat_nav{
+	z-index: 10;
+	position: fixed;
+	top: 105px;
+	left: 25px;
+	border-width: .5px;
+	border: solid;
+	border-color: black;
+	border-radius: 5px;
+}
+.chat_nav_head{
+	height: 17px;
+	width: 200px;
+	text-indent: 3px;
+	background-color: rgb(25, 47, 54);
+	text-align: center;
+}
+.chat_nav_body{
+	height: 183px;
+	width: 100%;
+	background: rgb(96, 91, 98);
+	height: 200px;
+	width: 200px;
+}
+.chatroom{
+	z-index: 20;
+	position: fixed;
+	top: 135px;
+	left: 105px;
+	border-width: .5px;
+	border: solid;
+	border-color: black;
+	border-radius: 5px;
+}
+.chatroom_head{
+	height: 17px;
+	width: 200px;
+	text-indent: 3px;
+	background-color: rgb(25, 47, 54);
+}
+.chatroom_body{
+	height: 183px;
+	width: 100%;
+	background: rgb(96, 91, 98);
+	height: 200px;
+	width: 200px;
+}

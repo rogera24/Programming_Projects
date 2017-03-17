@@ -1,0 +1,157 @@
+* {
+	font-family: Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	color: white;
+}
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+ul{
+	margin-top: 80px;
+	list-style-type: none;
+}
+li{
+	margin-top: 15px;
+	margin-left: 15px;
+	cursor: pointer;
+	font-size: 13px;
+}
+a{
+	text-decoration: none;
+}
+.header_bar{
+	z-index: 20;
+	position: absolute;
+	background: rgba(32, 181, 223, .8);
+	height: 60px;
+	width: 100%;
+}
+.image_box{
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	position: fixed;
+	background-color: rgba(32, 181, 223, .8);
+	background-image: url("../images/water_background.jpg");
+}
+.pic_nav{
+	left: -170px;
+	height: 100%;
+	width: 170px;
+	background: rgba(25, 205, 255, .8); 
+	position: absolute;
+	z-index: 10;
+}
+.list-title{
+	margin-left: 0px;
+	font-size: 20px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+.sub_title{
+	font-size: 30Px;
+	margin-top: 13px;
+	margin-left: 10px;
+	float: left;
+}
+.drop_down{
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+.drop_down_img{
+	margin: 15px;
+	float: left;
+	height: 30px;
+	width: 30px;
+}
+.content_window{
+	width: 100%;
+}
+.view_port{
+	height: 387px;
+	width: 516px;
+	margin-left: 15%;
+	margin-top: 85px;
+	float: left;
+}
+.picture_port{
+	height: 517px;
+	width: 385px;
+	border-color: rgba(170, 199, 255, .6);
+	border-width: 1px;
+	border-style: solid;
+}
+.pic_desc_panel{
+	margin-right: 15%;
+	margin-top: 225px;
+	float: right;
+	background: rgba(36, 51, 153, .7);
+	height: 250px;
+	width: 350px;
+	border-color: rgba(170, 199, 255, .6);
+	border-width: 1px;
+	border-style: solid;
+}
+.pic_desc{
+	margin-top: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.pic_title{
+	margin-top:10px;
+	margin-left:10px;
+}
+.bottom_bar{
+	z-index: 20;
+	position: absolute;
+	background: rgba(32, 181, 223, .8);
+	bottom: 0px;
+	height: 25px;
+	width: 100%;
+}
+.bot_title{
+	font-size: 12px;
+	margin-right: 10px;
+	margin-top: 7px;
+	float: right;
+}
+.left_change{
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.right_change{
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.arrow{
+	height: 60px;
+	width: 60px;
+	opacity: default;
+}
+.left_change_arrow{
+	top: 50%;
+	margin-top: -30px;
+	height: 60px;
+	width: 60px;
+	position: absolute;
+}
+.right_change_arrow{
+	top: 50%;
+	margin-top: -30px;
+	height: 60px;
+	width: 60px;
+	position: absolute;
+}
